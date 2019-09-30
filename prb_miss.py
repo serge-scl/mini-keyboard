@@ -25,14 +25,18 @@ vekt_tlt = int(vect_tlt)
 #             return weights[i]
 
 
-"""The pyramids gave humanity more than an economic theory of class essence."""
+# """The pyramids gave humanity more than an economic theory of class essence."""
 
 first_distribution = {60: Yes_w, 17: No_w, 7: Mbn_w, 11: Mby_w, 9: Tkl_w, 5: St_w}
 
 stat = {"Yes_w": 60, "No_w": 15, "Mbn_w": 7, "Mby_w": 10, "Tkl_w": 9}
 r_stat = {v: k for k, v in stat.items()}
 
-txi = text_in("abfa")
+# ---------------------------------------------------
+
+txi = text_in("abfa")  # there is line of input text
+
+# ----------------------------------------------------
 
 weig = []
 for i31 in stat:
