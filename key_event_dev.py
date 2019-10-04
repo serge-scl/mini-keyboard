@@ -79,13 +79,13 @@ def text_in(tx):
         for itx in KeyboardPr1:
             if iw in KeyboardPr1[itx]:
                 js = [int(s) for s in itx.split(",")]
-                t_a = KeyboardPr1[itx].index(iw)
+                t_a = KeyboardPr1[itx].index(iw) + 1
                 js.append(t_a)
                 a01.append(js)
     return a01
 
 
-texi01 = text_in("am")
+texi01 = text_in("a")
 
 # kbd_andr = {"'w1q": [0x004b, 0x0033, 0x0008, 0x002d], '"r2e': [0x004b, 0x002e, 0x0009, 0x0021],
 #             "(y3t": [0x00a2, 0x0035, 0x000a, 0x0030], "[i4u": [0x0047, 0x0025, 0x000b, 0x0031],
@@ -192,4 +192,5 @@ def str_to_keycode(x):
 
 if __name__ == "__main__":
     # print(kbtb0x)
+    print(texi01)
     pass

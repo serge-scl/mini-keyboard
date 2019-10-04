@@ -34,7 +34,7 @@ r_stat = {v: k for k, v in stat.items()}
 
 # ---------------------------------------------------
 
-txi = text_in("abfa")  # there is line of input text
+txi = text_in("argo")  # there is line of input text
 
 # ----------------------------------------------------
 
