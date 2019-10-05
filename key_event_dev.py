@@ -85,7 +85,7 @@ def text_in(tx):
     return a01
 
 
-texi01 = text_in("a")
+
 
 # kbd_andr = {"'w1q": [0x004b, 0x0033, 0x0008, 0x002d], '"r2e': [0x004b, 0x002e, 0x0009, 0x0021],
 #             "(y3t": [0x00a2, 0x0035, 0x000a, 0x0030], "[i4u": [0x0047, 0x0025, 0x000b, 0x0031],
@@ -191,6 +191,9 @@ texi01 = text_in("a")
 
 
 if __name__ == "__main__":
-    # print(kbtb0x)
+    texi01 = text_in("s")
     print(texi01)
+    # print(kbtb0x)
+    # print(texi01)
+    # print(kinv)
     pass

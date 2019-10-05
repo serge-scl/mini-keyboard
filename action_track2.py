@@ -130,10 +130,10 @@ class MayBeNo(TiltMove):
 
     def variant(self):
         if self.x_0 != 0:
-            wrt = ks1[self.x_2]
+            wrt = ks1[(self.x_2 - 1)]
             return wrt
         elif self.x_1 != 0:
-            wrt2 = ks1[self.x_2]
+            wrt2 = ks1[(self.x_2-1)]
             return wrt2
 
     def __call__(self, ch):
@@ -261,15 +261,15 @@ if __name__ == "__main__":
     # st2 = st1.stuck(1)
     # for i16 in st2:
     #     print(i16)
-    tm2 = TiklEvent([1, 0, 10], 1)
-    # tm3 = tm2.tkl_ev()
-    for i11 in tm2(10):
-        print(i11)
+    # tm2 = TiklEvent([1, 0, 10], 1)
+    # # tm3 = tm2.tkl_ev()
+    # for i11 in tm2(10):
+    #     print(i11)
     # y2 = YesEv2([1, 0, 12], 1)
     # for i4 in y2(10):
     #     print(i4)
-    # mbn2 = MayBeNo([1, 0, 12], 1)
-    # for i5 in mbn2(10):
-    #     print(i5)
+    mbn2 = MayBeNo([1, 0, 6], 1)
+    for i5 in mbn2(10):
+        print(i5)
 
     pass
