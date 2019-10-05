@@ -35,7 +35,7 @@ class TiltMove:
         self.x_2 = self.vect[2]
         self.adc_scl = ADC_scale
         self.frq = Frequency
-        self.tf = 1/Threshold
+        self.tf = 1/Frequency
         self.dfr = Differend / ADCvolt
         self.thr = int(Threshold)
 
@@ -71,7 +71,7 @@ class TiklEvent(TiltMove):
 
     def __call__(self, ch):
         timer = time.time()
-        while time.time() - timer < 1:
+        while time.time() - timer < 0.5:
             for tkl in range(0, self.thr + ch, self.zoom_tilt()):
                 for t2 in self.tikl_mov(tkl, 0):
                     yield t2
@@ -261,15 +261,15 @@ if __name__ == "__main__":
     # st2 = st1.stuck(1)
     # for i16 in st2:
     #     print(i16)
-    # tm2 = TiklEvent([1, 0, 10], 1)
+    tm2 = TiklEvent([1, 0, 10], 1)
     # tm3 = tm2.tkl_ev()
-    # for i11 in tm3:
-    #     print(i11)
+    for i11 in tm2(10):
+        print(i11)
     # y2 = YesEv2([1, 0, 12], 1)
     # for i4 in y2(10):
     #     print(i4)
-    mbn2 = MayBeNo([1, 0, 12], 1)
-    for i5 in mbn2(10):
-        print(i5)
+    # mbn2 = MayBeNo([1, 0, 12], 1)
+    # for i5 in mbn2(10):
+    #     print(i5)
 
     pass

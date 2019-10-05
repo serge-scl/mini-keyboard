@@ -22,7 +22,7 @@
 
 class KeyboardString2FD:
 
-    tb0x = ["'1", '"2', "(3", "[4", "{5",
+    tb0x = ["'1", "\"2", "(3", "[4", "{5",
             "$6", "#7", "@8", ";9", "%0",
             ">+", "<-", "&*", ":/", "!=",
             "xy", "yx", "yx", "yy", "xy",  # add fun joystick
@@ -97,97 +97,97 @@ texi01 = text_in("a")
 #             "%.=,": [0x00c4, 0x0038, 0x0046, 0x0037]}
 
 
-class KeyEvent:
-    ACTION_DOWN = 0  # cap touch & tilt 0_X | X-0
-    FLAG_TRACKING = 512  # superposition
-    ACTION_UP = 1  # Cap touch 0 -> yes
-    ACTION_MULTIPLE = 2  # maybe
-    FLAG_CANCELED = 32  # no
-    KEYCODE_0 = 7
-    KEYCODE_1 = 8
-    KEYCODE_2 = 9
-    KEYCODE_3 = 10
-    KEYCODE_4 = 11
-    KEYCODE_5 = 12
-    KEYCODE_6 = 13
-    KEYCODE_7 = 14
-    KEYCODE_8 = 15
-    KEYCODE_9 = 16
-    KEYCODE_PLUS = 81  # +
-    KEYCODE_MINUS = 69  # -
-    KEYCODE_NUMPAD_MULTIPLY = 155  # *
-    KEYCODE_NUMPAD_DIVIDE = 154  # /
-    KEYCODE_EQUAL = 70  # =
-    KEYCODE_A = 29
-    KEYCODE_B = 30
-    KEYCODE_C = 31
-    KEYCODE_D = 32
-    KEYCODE_E = 33
-    KEYCODE_ENTER = 66
-    KEYCODE_ESCAPE = 111
-    KEYCODE_F = 34
-    KEYCODE_G = 35
-    KEYCODE_H = 36
-    KEYCODE_HELP = 259
-    KEYCODE_HOME = 3
-    KEYCODE_I = 37
-    KEYCODE_INSERT = 124
-    KEYCODE_J = 38
-    KEYCODE_K = 39
-    KEYCODE_L = 40
-    KEYCODE_LANGUAGE_SWITCH = 204
-    KEYCODE_M = 41
-    KEYCODE_MENU = 82
-    KEYCODE_N = 42
-    KEYCODE_O = 43
-    KEYCODE_P = 44
-    KEYCODE_POWER = 26
-    KEYCODE_Q = 45
-    KEYCODE_R = 46
-    KEYCODE_S = 47
-    KEYCODE_SPACE = 62
-    KEYCODE_T = 48
-    KEYCODE_U = 49
-    KEYCODE_V = 50
-    KEYCODE_W = 51
-    KEYCODE_X = 52
-    KEYCODE_Y = 53
-    KEYCODE_Z = 54
-    KEYCODE_APOSTROPHE = 75  # '
-    KEYCODE_POUND = 18  # #
-    KEYCODE_AT = 77  # @
-    KEYCODE_LEFT_BRACKET = 71  # [
-    KEYCODE_COMMA = 55  # ,
-    KEYCODE_PERIOD = 56  # .
-    KEYCODE_QUERY = 56
+# class KeyEvent:
+#     ACTION_DOWN = 0  # cap touch & tilt 0_X | X-0
+#     FLAG_TRACKING = 512  # superposition
+#     ACTION_UP = 1  # Cap touch 0 -> yes
+#     ACTION_MULTIPLE = 2  # maybe
+#     FLAG_CANCELED = 32  # no
+#     KEYCODE_0 = 7
+#     KEYCODE_1 = 8
+#     KEYCODE_2 = 9
+#     KEYCODE_3 = 10
+#     KEYCODE_4 = 11
+#     KEYCODE_5 = 12
+#     KEYCODE_6 = 13
+#     KEYCODE_7 = 14
+#     KEYCODE_8 = 15
+#     KEYCODE_9 = 16
+#     KEYCODE_PLUS = 81  # +
+#     KEYCODE_MINUS = 69  # -
+#     KEYCODE_NUMPAD_MULTIPLY = 155  # *
+#     KEYCODE_NUMPAD_DIVIDE = 154  # /
+#     KEYCODE_EQUAL = 70  # =
+#     KEYCODE_A = 29
+#     KEYCODE_B = 30
+#     KEYCODE_C = 31
+#     KEYCODE_D = 32
+#     KEYCODE_E = 33
+#     KEYCODE_ENTER = 66
+#     KEYCODE_ESCAPE = 111
+#     KEYCODE_F = 34
+#     KEYCODE_G = 35
+#     KEYCODE_H = 36
+#     KEYCODE_HELP = 259
+#     KEYCODE_HOME = 3
+#     KEYCODE_I = 37
+#     KEYCODE_INSERT = 124
+#     KEYCODE_J = 38
+#     KEYCODE_K = 39
+#     KEYCODE_L = 40
+#     KEYCODE_LANGUAGE_SWITCH = 204
+#     KEYCODE_M = 41
+#     KEYCODE_MENU = 82
+#     KEYCODE_N = 42
+#     KEYCODE_O = 43
+#     KEYCODE_P = 44
+#     KEYCODE_POWER = 26
+#     KEYCODE_Q = 45
+#     KEYCODE_R = 46
+#     KEYCODE_S = 47
+#     KEYCODE_SPACE = 62
+#     KEYCODE_T = 48
+#     KEYCODE_U = 49
+#     KEYCODE_V = 50
+#     KEYCODE_W = 51
+#     KEYCODE_X = 52
+#     KEYCODE_Y = 53
+#     KEYCODE_Z = 54
+#     KEYCODE_APOSTROPHE = 75  # '
+#     KEYCODE_POUND = 18  # #
+#     KEYCODE_AT = 77  # @
+#     KEYCODE_LEFT_BRACKET = 71  # [
+#     KEYCODE_COMMA = 55  # ,
+#     KEYCODE_PERIOD = 56  # .
+#     KEYCODE_QUERY = 56
 
 
-Kpr = KeyboardString2FD
-Ke0 = KeyEvent
-Kinv = KeyboardInv(Kpr.tb0x)
+# Kpr = KeyboardString2FD
+# Ke0 = KeyEvent
+# Kinv = KeyboardInv(Kpr.tb0x)
 
 
-def str_to_keycode(x):
-    keybord_code = []
-    for ik in x:
-        tlt = []
-        try:
-            ch1 = ik[0]
-            ch2 = ik[1]
-            body = "Ke0.KEYCODE_"
-            tlt.insert(0, eval(body + ch1))
-            tlt.insert(1, eval(body + ch2))
-        except:
-            if ik[0] == ",":
-                tlt.insert(0, 55)
-                tlt.insert(1, 56)
-            elif ik[1] == "?":
-                tlt.insert(1, 101)
-            else:
-                tlt.insert(1, 102)
-        finally:
-            keybord_code.append(tlt)
-    print(keybord_code)
+# def str_to_keycode(x):
+#     keybord_code = []
+#     for ik in x:
+#         tlt = []
+#         try:
+#             ch1 = ik[0]
+#             ch2 = ik[1]
+#             body = "Ke0.KEYCODE_"
+#             tlt.insert(0, eval(body + ch1))
+#             tlt.insert(1, eval(body + ch2))
+#         except:
+#             if ik[0] == ",":
+#                 tlt.insert(0, 55)
+#                 tlt.insert(1, 56)
+#             elif ik[1] == "?":
+#                 tlt.insert(1, 101)
+#             else:
+#                 tlt.insert(1, 102)
+#         finally:
+#             keybord_code.append(tlt)
+#     print(keybord_code)
 
 
 if __name__ == "__main__":
