@@ -37,7 +37,7 @@ class TiltMove:
         self.frq = Frequency
         self.tf = 1/Frequency
         self.dfr = Differend / ADCvolt
-        self.thr = int(Threshold)
+        self.thr = Threshold
 
     def to_end(self):
         return int(self.adc_scl - random.randrange(0, 500))  # random power
@@ -161,10 +161,10 @@ class MayBeNo(TiltMove):
         may_be = input(f"input {self.variant()[0]} or {self.variant()[1]}")
         with open("box_tlt", "w") as bt:
             if may_be == self.variant()[0]:
-                yield self.x_0, self.x_1, self.x_2
+                yield self.x_0, self.x_1
                 bt.write(str(1))
             elif may_be == self.variant()[1]:
-                yield -self.x_0, -self.x_1, self.x_2
+                yield -self.x_0, -self.x_1
                 bt.write(str(-1))
             else:
                 yield 0, 0
@@ -253,6 +253,9 @@ if __name__ == "__main__":
     # yev2 = yev.yes_ev(2)
     # for i01 in yev2:
     #     print(i01)
+    # nev = NoEvent([-1, 0, 5], 1)
+    # for i7 in nev(10):
+    #     print(i7)
     # mby = MayBeYes([1, 0, 12], 1)
     # mb3 = mby.may_be_ya(Dwn)
     # for i10 in mb3:
@@ -261,15 +264,14 @@ if __name__ == "__main__":
     # st2 = st1.stuck(1)
     # for i16 in st2:
     #     print(i16)
-    # tm2 = TiklEvent([1, 0, 10], 1)
-    # # tm3 = tm2.tkl_ev()
-    # for i11 in tm2(10):
-    #     print(i11)
+    tm2 = TiklEvent([1, 0, 10], 1)
+    for i11 in tm2(10):
+        print(i11)
     # y2 = YesEv2([1, 0, 12], 1)
     # for i4 in y2(10):
     #     print(i4)
-    mbn2 = MayBeNo([1, 0, 6], 1)
-    for i5 in mbn2(10):
-        print(i5)
+    # mbn2 = MayBeNo([1, 0, 6], 1)
+    # for i5 in mbn2(10):
+    #     print(i5)
 
     pass

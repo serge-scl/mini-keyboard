@@ -74,13 +74,13 @@ for ti in txi:
     choice = f"{pow_tlt}({ti}, {vekt_tlt})"
     # print(choice)
     ch2 = eval(choice)
-    for i101 in range(0, 2):  # start block
-        basic_simulation.append([0, 0])
+    # for i101 in range(0, 2):  # start block
+    basic_simulation.append([0, 0])
     for i34 in ch2(10):
         basic_simulation.append(i34)
         # print(i34)
-    for i100 in range(0, 2):  # stop dlock
-        basic_simulation.append([1, 1])
+    # for i100 in range(0, 2):  # stop dlock
+    #     basic_simulation.append([1, 1])
         # guro x,y, z
 
     
