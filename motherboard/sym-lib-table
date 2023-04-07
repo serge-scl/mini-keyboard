@@ -1,4 +1,0 @@
-(sym_lib_table
-  (lib (name "touch_keys")(type "KiCad")(uri "${KIPRJMOD}/touch_keys.kicad_sym")(options "")(descr ""))
-  (lib (name "mouse")(type "KiCad")(uri "${KIPRJMOD}/mouse.kicad_sym")(options "")(descr ""))
-)
