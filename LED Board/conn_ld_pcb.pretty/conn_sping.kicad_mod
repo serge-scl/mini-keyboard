@@ -1,6 +1,6 @@
 (footprint "conn_sping" (version 20211014) (generator pcbnew)
   (layer "F.Cu")
-  (tedit 644512C0)
+  (tedit 644683B0)
   (attr through_hole)
   (fp_text reference "REF**" (at 0 -3 90 unlocked) (layer "F.SilkS")
     (effects (font (size 1 1) (thickness 0.15)))
@@ -17,7 +17,7 @@
   (pad "1" thru_hole circle (at 0 0) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask) (tstamp 7e969d15-6cc0-4258-8b27-586608a21adb))
   (pad "2" thru_hole circle (at 4 0) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask) (tstamp f022716e-b121-4cbf-a833-20e924070c22))
   (model "/home/sergesclv/Documents/pyramid keyboard/kicad/import/led_conn_spring.step"
-    (offset (xyz 2 0.75 -0.1))
+    (offset (xyz 2 0.75 0))
     (scale (xyz 1 1 1))
     (rotate (xyz -90 0 0))
   )
