@@ -99,7 +99,7 @@
   (symbol (lib_id "conn_mother_side:power_btr") (at 138.43 116.84 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 0aac861c-e6fd-4e49-904d-30464dc91a02)
-    (property "Reference" "U?" (id 0) (at 139.7 120.6499 90)
+    (property "Reference" "U6" (id 0) (at 139.7 120.6499 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "power_btr" (id 1) (at 139.7 123.1899 90)
@@ -117,7 +117,7 @@
   (symbol (lib_id "conn_mother_side:power_btr") (at 95.25 116.84 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 1f425f94-1fb7-44c4-a040-7b97662dd0ac)
-    (property "Reference" "U?" (id 0) (at 96.52 120.6499 90)
+    (property "Reference" "U3" (id 0) (at 96.52 120.6499 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "power_btr" (id 1) (at 96.52 123.1899 90)
@@ -135,7 +135,7 @@
   (symbol (lib_id "conn_mother_side:battery") (at 142.24 90.17 180) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 339af272-b753-45be-a8f1-5e3de643d818)
-    (property "Reference" "U?" (id 0) (at 137.795 82.55 0))
+    (property "Reference" "U7" (id 0) (at 137.795 82.55 0))
     (property "Value" "battery" (id 1) (at 137.795 85.09 0))
     (property "Footprint" "mother_conn_side:btttr" (id 2) (at 142.24 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -149,7 +149,7 @@
   (symbol (lib_id "conn_mother_side:power_btr") (at 110.49 116.84 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 671f8980-5c19-4691-b9f7-d847d34ad046)
-    (property "Reference" "U?" (id 0) (at 111.76 120.6499 90)
+    (property "Reference" "U4" (id 0) (at 111.76 120.6499 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "power_btr" (id 1) (at 111.76 123.1899 90)
@@ -167,7 +167,7 @@
   (symbol (lib_id "conn_mother_side:power_btr") (at 124.46 116.84 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid d56c24cd-18a2-4ffa-867b-44f80c7cdc8b)
-    (property "Reference" "U?" (id 0) (at 125.73 120.6499 90)
+    (property "Reference" "U5" (id 0) (at 125.73 120.6499 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "power_btr" (id 1) (at 125.73 123.1899 90)
@@ -185,7 +185,7 @@
   (symbol (lib_id "conn_mother_side:battery") (at 93.98 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid e2d83c5e-523a-4f60-994e-3139c5df75a4)
-    (property "Reference" "U?" (id 0) (at 101.6 87.6299 0)
+    (property "Reference" "U2" (id 0) (at 101.6 87.6299 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "battery" (id 1) (at 101.6 90.1699 0)
@@ -203,7 +203,7 @@
   (symbol (lib_id "conn_mother_side:power_btr") (at 81.28 116.84 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid e2ffa247-f3cf-4966-b880-52558324ad1f)
-    (property "Reference" "U?" (id 0) (at 82.55 120.6499 90)
+    (property "Reference" "U1" (id 0) (at 82.55 120.6499 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "power_btr" (id 1) (at 82.55 123.1899 90)
@@ -218,52 +218,31 @@
     (pin "1" (uuid e35d70e2-894b-4380-b9e7-30fae133041d))
   )
 
-  (symbol (lib_id "conn_mother_side:power_btr") (at 151.13 116.84 270) (unit 1)
-    (in_bom yes) (on_board yes) (fields_autoplaced)
-    (uuid efd7a1e0-5bed-4583-a94e-5ccec9e4eb74)
-    (property "Reference" "U?" (id 0) (at 152.4 120.6499 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "power_btr" (id 1) (at 152.4 123.1899 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "mother_conn_side:conn_side" (id 2) (at 151.13 116.84 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (id 3) (at 151.13 116.84 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid f7070c76-b83b-43a9-a243-491723819616))
-  )
-
   (sheet_instances
     (path "/" (page "1"))
   )
 
   (symbol_instances
-    (path "/0aac861c-e6fd-4e49-904d-30464dc91a02"
-      (reference "U?") (unit 1) (value "power_btr") (footprint "mother_conn_side:conn_side")
-    )
-    (path "/1f425f94-1fb7-44c4-a040-7b97662dd0ac"
-      (reference "U?") (unit 1) (value "power_btr") (footprint "mother_conn_side:conn_side")
-    )
-    (path "/339af272-b753-45be-a8f1-5e3de643d818"
-      (reference "U?") (unit 1) (value "battery") (footprint "mother_conn_side:btttr")
-    )
-    (path "/671f8980-5c19-4691-b9f7-d847d34ad046"
-      (reference "U?") (unit 1) (value "power_btr") (footprint "mother_conn_side:conn_side")
-    )
-    (path "/d56c24cd-18a2-4ffa-867b-44f80c7cdc8b"
-      (reference "U?") (unit 1) (value "power_btr") (footprint "mother_conn_side:conn_side")
+    (path "/e2ffa247-f3cf-4966-b880-52558324ad1f"
+      (reference "U1") (unit 1) (value "power_btr") (footprint "mother_conn_side:conn_side")
     )
     (path "/e2d83c5e-523a-4f60-994e-3139c5df75a4"
-      (reference "U?") (unit 1) (value "battery") (footprint "mother_conn_side:btttr")
+      (reference "U2") (unit 1) (value "battery") (footprint "mother_conn_side:btttr")
     )
-    (path "/e2ffa247-f3cf-4966-b880-52558324ad1f"
-      (reference "U?") (unit 1) (value "power_btr") (footprint "mother_conn_side:conn_side")
+    (path "/1f425f94-1fb7-44c4-a040-7b97662dd0ac"
+      (reference "U3") (unit 1) (value "power_btr") (footprint "mother_conn_side:conn_side")
     )
-    (path "/efd7a1e0-5bed-4583-a94e-5ccec9e4eb74"
-      (reference "U?") (unit 1) (value "power_btr") (footprint "mother_conn_side:conn_side")
+    (path "/671f8980-5c19-4691-b9f7-d847d34ad046"
+      (reference "U4") (unit 1) (value "power_btr") (footprint "mother_conn_side:conn_side")
+    )
+    (path "/d56c24cd-18a2-4ffa-867b-44f80c7cdc8b"
+      (reference "U5") (unit 1) (value "power_btr") (footprint "mother_conn_side:conn_side")
+    )
+    (path "/0aac861c-e6fd-4e49-904d-30464dc91a02"
+      (reference "U6") (unit 1) (value "power_btr") (footprint "mother_conn_side:conn_side")
+    )
+    (path "/339af272-b753-45be-a8f1-5e3de643d818"
+      (reference "U7") (unit 1) (value "battery") (footprint "mother_conn_side:btttr")
     )
   )
 )
