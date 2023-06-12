@@ -120,7 +120,7 @@
 
   (footprint "mother_conn_side:btttr" (layer "F.Cu")
     (tedit 646C4E40) (tstamp 65134029-dbd2-409a-85a8-13c2a33ff019)
-    (at 208 112)
+    (at 210 112)
     (property "Sheetfile" "right side PCB.kicad_sch")
     (property "Sheetname" "")
     (path "/339af272-b753-45be-a8f1-5e3de643d818")
@@ -189,7 +189,7 @@
 
   (footprint "mother_conn_side:btttr" (layer "F.Cu")
     (tedit 646C4E40) (tstamp 9cb12cc8-7f1a-4a01-9256-c119f11a8a02)
-    (at 154 112)
+    (at 152 112)
     (property "Sheetfile" "right side PCB.kicad_sch")
     (property "Sheetname" "")
     (path "/e2d83c5e-523a-4f60-994e-3139c5df75a4")
