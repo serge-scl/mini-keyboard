@@ -3082,6 +3082,9 @@
     (path "/7f0219d7-f801-4bc0-9074-00af159f1f32/19c604b2-b3c4-49b6-b9c3-4be5c845b0bc"
       (reference "#PWR020") (unit 1) (value "GND") (footprint "")
     )
+    (path "/7f0219d7-f801-4bc0-9074-00af159f1f32/e7ef55bd-b405-45b8-9c2e-c2b3259d390d"
+      (reference "#PWR021") (unit 1) (value "GND") (footprint "")
+    )
     (path "/1509b6e6-a266-4bd3-bef6-1700f12ad930"
       (reference "C1") (unit 1) (value "0.01uf") (footprint "Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T_Pad1.50x2.35mm_HandSolder")
     )
