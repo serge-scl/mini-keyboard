@@ -1,6 +1,6 @@
+# keyboard screen display to improve touch typing skills
+
 from tkinter import *
-
-
 
 top_bottom_characters = ["'1", "\"2", "(3", "[4", "{5",
                          "$6", "#7", "@8", ";9", "%0",
@@ -10,9 +10,11 @@ right_left_characters = ["QW", "ER", "TY", "UI", "OP",
                          "ZX", "CV", "BN", "M?", ",."]
 
 
-
 root = Tk()
 root.title('On Screen Keyboard')
+# def handle_keypress(event):
+#     print(event.char)
+
 stp = 0
 for outer_row in range(3):
     for outer_col in range(5):
@@ -35,6 +37,8 @@ for outer_row in range(3):
         myLbl5 = Label(frm, text='x', height=2, width=4, fg='red', bg='LightCyan2', font="Helvetica 10").grid(row=1, column=1)
     stp +=4
 
+# root.bind("<Key>", handle_keypress)
 
 if __name__ == '__main__':
     root.mainloop()
+    
