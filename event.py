@@ -8,7 +8,7 @@ the character entered into the text is highlighted. The idea is the same as the 
 
 from tkinter import *
 
-
+# keyboard layout
 top_bottom_characters = ["'1", "\"2", "(3", "[4", "{5",
                          "$6", "#7", "@8", ";9", "%0",
                          ">+", "<-", "&*", ":/", "!="]
@@ -16,19 +16,23 @@ right_left_characters = ["QW", "ER", "TY", "UI", "OP",
                          "AS", "DF", "GH", "JK", "L^",
                          "ZX", "CV", "BN", "M?", ",."]
 
+# keyboard palette
 font0 = 'Helvetica'
 font1 = 'Liberation Serif'
-back_ground0 = 'gray80'
+back_ground0 = 'LightCyan2'
 activ_bg = 'yellow3'
+akitv_text = 'red2'
+back_text = 'grey2'
 
 
 num_pyramid = 5  # this is the number of a separate pyramid
 
+# uppercase and lowercase letters
 one_key_pyramid = [top_bottom_characters[num_pyramid][0],top_bottom_characters[num_pyramid][1],
                    str.lower(right_left_characters[num_pyramid][0]), str.lower(right_left_characters[num_pyramid][1])]
 def scan_key(event):
     if event.char in one_key_pyramid:
-        captch_key['fg']='red'
+        captch_key['fg']=akitv_text
         captch_key['bg']=activ_bg
         top_key['bg'] =activ_bg
         bottom_key['bg'] =activ_bg
@@ -36,11 +40,17 @@ def scan_key(event):
         righ_key['bg'] =activ_bg
         root['bg'] =activ_bg
         if event.char == left_key['text']:
-            left_key['fg'] = 'red2'
+            left_key['fg'] = akitv_text
             left_key['font']=(font1, 16)
         elif event.char == righ_key['text']:
-            righ_key['fg']='red2'
+            righ_key['fg']=akitv_text
             righ_key['font']=(font1, 16)
+        elif event.char ==top_key['text']:
+            top_key['fg'] = akitv_text
+            top_key['font'] = (font1,16)
+        elif event.char == bottom_key['text']:
+            bottom_key['fg'] = akitv_text
+            bottom_key['font'] = (font1, 16)
 
     else:
         top_key['bg'] =back_ground0
@@ -50,20 +60,27 @@ def scan_key(event):
         root['bg'] = back_ground0
         captch_key['fg']='blue'
         captch_key['bg']=back_ground0
-        left_key['fg'] = 'gray2'
-        righ_key['fg']='gray2'
+        left_key['fg'] = back_text
+        righ_key['fg']=back_text
+        top_key['fg'] = back_text
+        bottom_key['fg'] = back_text
         left_key['font']=(font0,16)
         righ_key['font']=(font0,16)
+        top_key['font'] = (font0, 16)
+        top_key['font'] = (font0, 16)
+        bottom_key['font'] = (font0, 16)
+        bottom_key['font'] = (font0, 16)
 
 
     # print(event.char)
 root = Tk()
 
-captch_key = Label(text='x', fg='blue', height=1, width=2, font=(font0, 16))
-top_key = Label(text=one_key_pyramid[0], height=1, width=2, font=(font0, 16))
-bottom_key = Label( text=one_key_pyramid[1], height=1, width=2, font=(font0, 16))
-left_key = Label( text=one_key_pyramid[2], height=1, width=2, font=(font0, 16))
-righ_key = Label( text=one_key_pyramid[3], height=1, width=2, font=(font0, 16))
+captch_key = Label(text='x', fg='blue',bg=back_ground0, height=1, width=2, font=(font0, 16))
+top_key = Label(text=one_key_pyramid[0], bg=back_ground0, height=1, width=2, font=(font0, 16))
+bottom_key = Label( text=one_key_pyramid[1], bg=back_ground0, height=1, width=2, font=(font0, 16))
+left_key = Label( text=one_key_pyramid[2],bg=back_ground0, height=1, width=2, font=(font0, 16))
+righ_key = Label( text=one_key_pyramid[3], bg=back_ground0, height=1, width=2, font=(font0, 16))
+root['bg'] = back_ground0
 captch_key.grid(row=1,column=1)
 top_key.grid(row=0, column=1)
 bottom_key.grid(row=2, column=1)
