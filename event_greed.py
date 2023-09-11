@@ -43,21 +43,24 @@ def keyboard(ch=''):
                            right_left_characters[step][0],right_left_characters[step][1]]
 
 
-            bgr0 = lambda x : activ_bg if x in one_pyramid else back_ground0
-            bgr = bgr0(ch)
-            stx = back_text
-            fgr = font0
-            ftz = font_sz
+            bgr0 = lambda: activ_bg if ch in one_pyramid else back_ground0
+            tp_tx = lambda: akitv_text if ch == one_pyramid[0] else back_text
+            bt_tx = lambda: akitv_text if ch == one_pyramid[1] else back_text
+            lf_tx = lambda: akitv_text if ch == one_pyramid[2] else back_text
+            rt_tx = lambda: akitv_text if ch == one_pyramid[3] else back_text
+            tp_fg = lambda: font1 if ch == one_pyramid[0] else font1
+            bg_fg = lambda: font1 if ch == one_pyramid[1] else font1
+            lf_fg = lambda: font1 if ch == one_pyramid[2] else font1
+            rt_fg = lambda: font1 if ch == one_pyramid[3] else font1
 
-
-            frm = Frame(root, bg=bgr)
+            frm = Frame(root, bg=bgr0())
             frm.grid(row=out_row, column=out_col, padx=2, pady=2)
 
-            captch_key = Label(frm,text='x', fg='blue', bg=bgr, height=1, width=2, font=(fgr, ftz))
-            top_key = Label(frm,text=one_pyramid[0], fg=stx, bg=bgr, height=1, width=2, font=(fgr, ftz))
-            bottom_key = Label(frm,text=one_pyramid[1], fg=stx, bg=bgr, height=1, width=2, font=(fgr, ftz))
-            left_key = Label(frm,text=one_pyramid[2], fg=stx, bg=bgr, height=1, width=2, font=(fgr, ftz))
-            righ_key = Label(frm,text=one_pyramid[3], fg=stx, bg=bgr, height=1, width=2, font=(fgr, ftz))
+            captch_key = Label(frm,text='x', fg='blue', bg=bgr0(), height=1, width=2, font=(font0, font_sz))
+            top_key = Label(frm,text=one_pyramid[0], fg=tp_tx(), bg=bgr0(), height=1, width=2, font=(tp_fg(), font_sz))
+            bottom_key = Label(frm,text=one_pyramid[1], fg=bt_tx(), bg=bgr0(), height=1, width=2, font=(bg_fg(), font_sz))
+            left_key = Label(frm,text=one_pyramid[2], fg=lf_tx(), bg=bgr0(), height=1, width=2, font=(lf_fg(), font_sz))
+            righ_key = Label(frm,text=one_pyramid[3], fg=rt_tx(), bg=bgr0(), height=1, width=2, font=(rt_fg(), font_sz))
             root['bg'] = 'blue'
             captch_key.grid(row=1, column=1)
             top_key.grid(row=0, column=1)
