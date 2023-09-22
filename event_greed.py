@@ -40,18 +40,19 @@ def keyboard(ch=''):
             step = out_row + out_col + stp
 
             one_pyramid = [top_bottom_characters[step][0],top_bottom_characters[step][1],
-                           right_left_characters[step][0],right_left_characters[step][1]]
+                           right_left_characters[step][0],right_left_characters[step][1],
+                           str.lower(right_left_characters[step][0]), str.lower(right_left_characters[step][1])]
 
 
             bgr0 = lambda: activ_bg if ch in one_pyramid else back_ground0
             tp_tx = lambda: akitv_text if ch == one_pyramid[0] else back_text
             bt_tx = lambda: akitv_text if ch == one_pyramid[1] else back_text
-            lf_tx = lambda: akitv_text if ch == one_pyramid[2] else back_text
-            rt_tx = lambda: akitv_text if ch == one_pyramid[3] else back_text
+            lf_tx = lambda: akitv_text if ch == one_pyramid[4] else back_text
+            rt_tx = lambda: akitv_text if ch == one_pyramid[5] else back_text
             tp_fg = lambda: font1 if ch == one_pyramid[0] else font1
             bg_fg = lambda: font1 if ch == one_pyramid[1] else font1
-            lf_fg = lambda: font1 if ch == one_pyramid[2] else font1
-            rt_fg = lambda: font1 if ch == one_pyramid[3] else font1
+            lf_fg = lambda: font1 if ch == one_pyramid[4] else font1
+            rt_fg = lambda: font1 if ch == one_pyramid[5] else font1
 
             frm = Frame(root, bg=bgr0())
             frm.grid(row=out_row, column=out_col, padx=2, pady=2)
