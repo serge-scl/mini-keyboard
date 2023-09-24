@@ -8,7 +8,6 @@ The simulation starts as soon as the chip is connected to the computer,
 but then stops after break. If you make the next simulation run,
 you must activate the application window three seconds in advance,
 otherwise the symbol will be printed in the editor itself.
-Currently the keyboard simulator works with the event.py 
 """
 
 import time
@@ -16,7 +15,8 @@ import usb_hid
 import random 
 
 from adafruit_hid.keyboard import Keyboard
-from adafruit_hid.keycode import Keycode
+
+from pk_layout import pyramid_keyboard_layout
 
 top_bottom_characters = ["'1", "\"2", "(3", "[4", "{5",
                          "$6", "#7", "@8", ";9", "%0",
@@ -26,21 +26,17 @@ right_left_characters = ["qw", "er", "ty", "ui", "op",
                          "zx", "cv", "bn", "m?", ",."]
 
 
-pyramid_keyboard_layout = {'a': Keycode.A, 'b': Keycode.B, 's': Keycode.S,
-                           '$': (Keycode.SHIFT, Keycode.FOUR), '6': Keycode.SIX}
-
-
 
 time.sleep(3) # activate the text input application
 
 keyboard = Keyboard(usb_hid.devices)
 
 while True:
-    toch_sm = 5  # capacitive touch sensor IC data simulator
+    toch_sm = random.randint(0, 14)  # capacitive touch sensor IC data simulator
     
     
-    hall_tb = random.randint(1,100)  # simulation of a vertical Hall sensor
-    hall_lr = random.randint(1,100)  # simulation of a horizontal Hall sensor
+    hall_tb = random.randint(0,100)  # simulation of a vertical Hall sensor
+    hall_lr = random.randint(0,100)  # simulation of a horizontal Hall sensor
     rest_point = 50 # moving grid rest point
 
     mov_tb = rest_point - hall_tb
