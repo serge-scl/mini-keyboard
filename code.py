@@ -29,7 +29,7 @@ right_left_characters = ["qw", "er", "ty", "ui", "op",
 
 time.sleep(3) # activate the text input application
 
-keyboard = Keyboard(usb_hid.devices)
+mkps = Keyboard(usb_hid.devices)
 
 while True:
     toch_sm = random.randint(0, 14)  # capacitive touch sensor IC data simulator
@@ -59,8 +59,8 @@ while True:
     print(ch())
     
     if isinstance(ch(), tuple) is True:
-        keyboard.send(ch()[0], ch()[1])
+        mkps.send(ch()[0], ch()[1])
     else:
-        keyboard.send(ch())
+        mkps.send(ch())
 
     break # break is  Simulator mode, turns at loop into at algorithm
