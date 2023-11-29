@@ -432,7 +432,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../../Documents/pyramid keyboard/export/motherboard2.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
