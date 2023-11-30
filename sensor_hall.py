@@ -11,7 +11,7 @@ I used a 0.5 second sample, which is about ten times slower than what it would b
 import asyncio
 import board
 import analogio
-import digitalio
+# import digitalio
 # import time
 import usb_hid
 
@@ -38,15 +38,13 @@ start_stop = True
 label_tb = 58501
 label_lr = 58502
 
-touch_sensor = 1
-
 
 class HallBuffer:
     def __init__(self, x, y):
         self.tb_hall = [x]
         self.lr_hall = [y]
 
-async def hall_sensor(x,n, n1):
+async def hall_sensor(x,n, n1, ts):
     
     with analogio.AnalogIn(x) as pin_x:
         while True:
@@ -63,9 +61,9 @@ async def hall_sensor(x,n, n1):
                         ch = " "
                         level = []
                         if label == label_tb:
-                            level = top_bottom_characters[touch_sensor]
+                            level = top_bottom_characters[ts]
                         elif label == label_lr:
-                            level = right_left_characters[touch_sensor]
+                            level = right_left_characters[ts]
 
                         if middle_h > middle_h1:
                             ch = level[0]
@@ -94,9 +92,9 @@ async def hall_sensor(x,n, n1):
             else:
                 break
 
-async def main():
+async def main(n):
     buffer_hall = HallBuffer(label_tb, label_lr)
-    hall_tb = asyncio.create_task(hall_sensor(board.A0, buffer_hall.tb_hall, buffer_hall.lr_hall))
-    hall_lr = asyncio.create_task(hall_sensor(board.A1, buffer_hall.lr_hall, buffer_hall.tb_hall))
+    hall_tb = asyncio.create_task(hall_sensor(board.A0, buffer_hall.tb_hall, buffer_hall.lr_hall, n))
+    hall_lr = asyncio.create_task(hall_sensor(board.A1, buffer_hall.lr_hall, buffer_hall.tb_hall,n))
     await asyncio.gather(hall_tb, hall_lr)
 
