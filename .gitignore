@@ -6,3 +6,5 @@
 fp-info-cache
 fp-lib-table
 sym-lib-table
+*.FCBak
+
