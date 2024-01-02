@@ -1,7 +1,7 @@
 
 Mouse Keyboard Pyramids (MKP)
 The project is currently being developed on wikifactory.
-https://wikifactory.com/@sergesclv/mouse-keyboard-pyramids 
+https://wikifactory.com/@sergesclv/projects/mouse-keyboard-pyramids
 
 
  I think that this should be appreciated by those who have a problem with the keyboard taking up a lot of space on the table.
