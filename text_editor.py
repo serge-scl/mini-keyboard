@@ -2,6 +2,8 @@
 
 import tkinter as tk
 from tkinter import filedialog
+# from pynput.keyboard import Listener
+
 
 class Kb:
     tb_ch_e = ["'1", "\"2", "(3", "[4", "{5",
@@ -11,12 +13,12 @@ class Kb:
                "AS", "DF", "GH", "JK", "L^",
                "ZX", "CV", "BN", "M?", ",."]
 
-    tb_ch_ru = ["'1", "\"2", "(3", "[4", "{5",
-                "Х6", "Ю7", "Э8", ";9", "%0",
-                ">+", "<-", "&*", ":/", "!="]
-    rl_ch_ru = ["ЙЦ", "УК", "ЕН", "ГШ", "ЩЗ",
-                "ФЫ", "ВА", "ПР", "ОЛ", "ДЖ",
-                "ЯЧ", "СМ", "ИТ", "ЬБ", ",."]
+    joysticks = ["<-", "shift", "Del", "Ctrl", "Alt", "Shift", "Enter", "->"]
+
+    ch_up_e = [x + y for x, y in zip(tb_ch_e, rl_ch_e)]
+    rl_ch_lw_e = list(map(lambda x: x.lower(), rl_ch_e))
+    ch_e = [x + y for x, y in zip(ch_up_e, rl_ch_lw_e)]
+
     font0 = 'Helvetica'
     font1 = 'Liberation Serif'
     bk_gr0 = 'LightCyan2'
@@ -24,7 +26,18 @@ class Kb:
     akitv_text = 'red2'
     back_text = 'grey2'
     font_sz = 18
-    joysticks = ["<-", "shift", "Del", "Ctrl", "Alt", "Shift", "Enter", "->"]
+
+
+    tb_ch_ru = ["'1", "\"2", "(3", "[4", "{5",
+                "Х6", "Ю7", "Э8", ";9", "%0",
+                ">+", "<-", "&*", ":/", "!="]
+    rl_ch_ru = ["ЙЦ", "УК", "ЕН", "ГШ", "ЩЗ",
+                "ФЫ", "ВА", "ПР", "ОЛ", "ДЖ",
+                "ЯЧ", "СМ", "ИТ", "ЬБ", ",."]
+
+    ch_up_ru = [x + y for x, y in zip(tb_ch_ru, rl_ch_ru)]
+    rl_ch_lw_ru = list(map(lambda x: x.lower(), rl_ch_ru))
+    ch_ru = [x + y for x, y in zip(ch_up_ru, rl_ch_lw_ru)]
 
 
 class EditorMKPs:
@@ -42,8 +55,20 @@ class EditorMKPs:
         self.kbr(Kb.rl_ch_e,Kb.tb_ch_e)
         self.joysticks()
         self.create_menu()
+        self.tip_touch(x=16)
+        self.window0.bind("<Key>", self.scan_key)
+        self.n_tip = 16
 
         self.window0.mainloop()
+
+
+    def scan_key(self,event):
+        for i in range(15):
+            i2 = Kb.ch_e[i]
+            if event.char in i2:
+                # print(f" number press {i}")
+                self.tip_touch(i)
+        # print(f" letter {event.char}")
 
     def kbr(self, x, y):
         stp = 0
@@ -51,7 +76,7 @@ class EditorMKPs:
         for out_row in range(3):
             for out_col in range(5):
 
-                prm = tk.Frame(self.kb_frame, bg=Kb.bk_gr0)
+                prm = tk.Frame(self.kb_frame)
                 prm.grid(row=out_row, column=out_col)
                 ps = out_row + out_col + stp
                 top = y[ps][0]
@@ -59,29 +84,46 @@ class EditorMKPs:
                 lft = x[ps][0]
                 rt = x[ps][1]
 
-                tp_ch = tk.Label(prm, text=top, bg=Kb.bk_gr0)
-                lft_ch = tk.Label(prm, text=lft, bg=Kb.bk_gr0)
-                btm_ch = tk.Label(prm, text=btm, bg=Kb.bk_gr0)
-                rt_ch = tk.Label(prm, text=rt, bg=Kb.bk_gr0)
-                tip = tk.Label(prm, text="x", bg=Kb.bk_gr0)
+                tp_ch = tk.Label(prm, text=top)
+                lft_ch = tk.Label(prm, text=lft)
+                btm_ch = tk.Label(prm, text=btm)
+                rt_ch = tk.Label(prm, text=rt)
+                # tip = tk.Label(prm, text="x", bg=Kb.bk_gr0)
 
                 tp_ch.grid(row=0, column=1)
                 lft_ch.grid(row=1, column=0)
                 btm_ch.grid(row=2, column=1)
                 rt_ch.grid(row=1, column=2)
-                tip.grid(row=1, column=1)
+                # tip.grid(row=1, column=1)
 
             stp +=4
+
+    def tip_touch(self, x):
+        for out_row in range(3):
+            for out_col in range(5):
+                ns = out_row * 5 + out_col
+                if ns == x:
+                    tp = tk.Frame(self.kb_frame)
+                    tp.grid(row=out_row, column=out_col)
+                    tip = tk.Label(tp, text="X", fg=Kb.akitv_text, bg=Kb.activ_bg)
+                    tip.pack()
+                else:
+                    tp = tk.Frame(self.kb_frame)
+                    tp.grid(row=out_row, column=out_col)
+                    tip = tk.Label(tp, text="x", bg=Kb.bk_gr0)
+                    tip.pack()
+
+
 
     def joysticks(self):
         back =tk.Label(self.joyst_frames, text= Kb.joysticks[0])
         shift1 = tk.Label(self.joyst_frames, text=Kb.joysticks[1])
-        jst1 = tk.Label(self.joyst_frames, text="x")
+        jst1 = tk.Label(self.joyst_frames, text="x", bg=Kb.bk_gr0)
         dl = tk.Label(self.joyst_frames, text=Kb.joysticks[2])
         clrl = tk.Label(self.joyst_frames, text=Kb.joysticks[3])
         alt = tk.Label(self.joyst_frames, text=Kb.joysticks[4])
         shif2 = tk.Label(self.joyst_frames, text=Kb.joysticks[5])
-        jst2 = tk.Label(self.joyst_frames, text= "x")
+        jst2 = tk.Label(self.joyst_frames, text= "x", bg=Kb.bk_gr0)
         enter = tk.Label(self.joyst_frames, text=Kb.joysticks[6])
         blank = tk.Label(self.joyst_frames, text=Kb.joysticks[7])
 
@@ -127,6 +169,7 @@ class EditorMKPs:
             self.window0.title(f"pyramid keyboard editor - {file}")
 
 
-
 if __name__ == "__main__":
+    # print(Kb.ch_e)
     EditorMKPs()
+
