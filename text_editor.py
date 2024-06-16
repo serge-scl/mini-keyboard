@@ -53,14 +53,49 @@ class EditorMKPs:
         self.joyst_frames.pack(anchor=tk.S)
 
         self.kbr(Kb.rl_ch_e,Kb.tb_ch_e)
-        self.joysticks()
+        self.j_com()
+        # self.joysticks()
         self.create_menu()
-        self.tip_touch(x=16)
+        # self.tip_touch(x=16)
         self.window0.bind("<Key>", self.scan_key)
+        self.window0.bind("<Return>", self.scan_com_e)
+        self.window0.bind('<space>', self.scan_com_sp)
+        self.window0.bind('<Control_L>', self.scan_com_ct)
+        self.window0.bind('<Alt_L>', self.scan_com_al)
+        self.window0.bind('<Shift_L>', self.scan_com_sl)
+        self.window0.bind('<Shift_R>', self.scan_com_sr)
+        self.window0.bind("<Delete>", self.scan_com_d)
+        self.window0.bind('<BackSpace>', self.scan_key_bk)
         self.n_tip = 16
 
         self.window0.mainloop()
 
+
+    def scan_com_e(self, event):
+        self.joystick_r()
+
+    def scan_com_sp(self, event):
+        self.joystick_r()
+        self.tip_touch(16)
+
+    def scan_key_bk(self, event):
+        self.joystick_l()
+
+    def scan_com_ct(self, event):
+        self.joystick_l()
+
+    def scan_com_al(self, event):
+        self.joystick_r()
+
+
+    def scan_com_d(self,event):
+        self.joystick_l()
+
+    def scan_com_sl(self,event):
+        self.joystick_l()
+
+    def scan_com_sr(self,event):
+        self.joystick_r()
 
     def scan_key(self,event):
         for i in range(15):
@@ -98,45 +133,54 @@ class EditorMKPs:
 
             stp +=4
 
-    def tip_touch(self, x):
+    def tip_touch(self, x = 16):
         for out_row in range(3):
             for out_col in range(5):
                 ns = out_row * 5 + out_col
+                tp = tk.Frame(self.kb_frame)
+                tp.grid(row=out_row, column=out_col)
                 if ns == x:
-                    tp = tk.Frame(self.kb_frame)
-                    tp.grid(row=out_row, column=out_col)
                     tip = tk.Label(tp, text="X", fg=Kb.akitv_text, bg=Kb.activ_bg)
-                    tip.pack()
                 else:
-                    tp = tk.Frame(self.kb_frame)
-                    tp.grid(row=out_row, column=out_col)
                     tip = tk.Label(tp, text="x", bg=Kb.bk_gr0)
-                    tip.pack()
+                tip.pack()
 
 
-
-    def joysticks(self):
+    def j_com(self):
         back =tk.Label(self.joyst_frames, text= Kb.joysticks[0])
         shift1 = tk.Label(self.joyst_frames, text=Kb.joysticks[1])
-        jst1 = tk.Label(self.joyst_frames, text="x", bg=Kb.bk_gr0)
+        # jst1 = tk.Label(self.joyst_frames, text="x", bg=Kb.bk_gr0)
         dl = tk.Label(self.joyst_frames, text=Kb.joysticks[2])
         clrl = tk.Label(self.joyst_frames, text=Kb.joysticks[3])
         alt = tk.Label(self.joyst_frames, text=Kb.joysticks[4])
         shif2 = tk.Label(self.joyst_frames, text=Kb.joysticks[5])
-        jst2 = tk.Label(self.joyst_frames, text= "x", bg=Kb.bk_gr0)
+        # jst2 = tk.Label(self.joyst_frames, text= "x", bg=Kb.bk_gr0)
         enter = tk.Label(self.joyst_frames, text=Kb.joysticks[6])
         blank = tk.Label(self.joyst_frames, text=Kb.joysticks[7])
 
         back.grid(row=1, column=0)
         shift1.grid(row=0, column=1)
-        jst1.grid(row=1, column=1)
+        # jst1.grid(row=1, column=1)
         dl.grid(row=2, column=1)
         clrl.grid(row=1, column=2)
         alt.grid(row=1, column=3)
         shif2.grid(row=0, column=4)
-        jst2.grid(row=1, column=4)
+        # jst2.grid(row=1, column=4)
         enter.grid(row=2, column=4)
         blank.grid(row=1, column=5)
+
+    def joystick_l(self):
+        jst1 = tk.Label(self.joyst_frames, text="X", fg=Kb.akitv_text, bg=Kb.activ_bg)
+        jst2 = tk.Label(self.joyst_frames, text="x", bg=Kb.bk_gr0)
+        jst1.grid(row=1, column=1)
+        jst2.grid(row=1, column=4)
+        
+    def joystick_r(self):
+        jst2 = tk.Label(self.joyst_frames, text="X", fg=Kb.akitv_text, bg=Kb.activ_bg)
+        jst1 = tk.Label(self.joyst_frames, text="x", bg=Kb.bk_gr0)
+        jst2.grid(row=1, column=4)
+        jst1.grid(row=1, column=1)
+
 
     def create_menu(self):
         menu = tk.Menu(self.window0)
