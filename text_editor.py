@@ -43,8 +43,9 @@ class Kb:
 class EditorMKPs:
     def __init__(self):
         self.window0 = tk.Tk()
+        self.window0.geometry("300x450")
         self.window0.title("pyramid keyboard editor")
-        self.text_area = tk.Text(self.window0, wrap="word")
+        self.text_area = tk.Text(self.window0, height=10, wrap="word")
         self.kb_frame = tk.Frame(self.window0)
         self.joyst_frames = tk.Frame(self.window0)
 
@@ -66,7 +67,9 @@ class EditorMKPs:
         self.window0.bind('<Shift_R>', self.scan_com_sr)
         self.window0.bind("<Delete>", self.scan_com_d)
         self.window0.bind('<BackSpace>', self.scan_key_bk)
-        self.n_tip = 16
+        # self.window0.bind('<KeyPress>', self.press_key)
+        self.window0.bind('<KeyRelease>', self.release_key)
+        # self.n_tip = 16
 
         self.window0.mainloop()
 
@@ -96,6 +99,12 @@ class EditorMKPs:
 
     def scan_com_sr(self,event):
         self.joystick_r()
+
+    # def press_key(self, event):
+    #     print (f" event press")
+
+    def release_key(self, event):
+        print(f" pelease event key")
 
     def scan_key(self,event):
         for i in range(15):
