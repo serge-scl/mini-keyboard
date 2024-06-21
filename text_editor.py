@@ -1,7 +1,21 @@
-# switching keyboard to local layout
+# mouse keyboard pyramids MKP
+# Serge Sokolov
+
+"""
+The feature of my keyboard is that the entered character is determined at two levels by sensors of different types.
+ Touching the tip of the pyramid with a finger activates the capacitive touch sensor,
+and the tilt of the tip towards a particular symbol is determined by Hall sensors.
+A regular button has two states: pressed and released.  I have three conditions.
+Touch, movement, release. The advantage of my keyboard is that after the first touch,
+when you have not yet selected the desired symbol or letter, you can already receive an on-screen result.
+Five columns of pyramids fit perfectly under five fingers.
+Learning to touch-type on my keyboard is not much more difficult than learning to work with a computer mouse.
+"""
 
 import tkinter as tk
 from tkinter import filedialog
+import time
+# from ttkthemes import ThemedTk
 # from pynput.keyboard import Listener
 
 
@@ -27,6 +41,11 @@ class Kb:
     back_text = 'grey2'
     font_sz = 18
 
+    #  You can easily change the keyboard layout to a local one with the national alphabet.
+    #  In this case, my additional keyboard layout is Cyrillic. You can try adding your own alphabet.
+    #  60 characters is not a complete limitation,
+    #  since when touch typing on the screen you can create something like scrolling,
+    #  and then the meaning of the symbols on the pyramids can be reloaded as you work.
 
     tb_ch_ru = ["'1", "\"2", "(3", "[4", "{5",
                 "Х6", "Ю7", "Э8", ";9", "%0",
@@ -53,66 +72,74 @@ class EditorMKPs:
         self.kb_frame.pack(anchor=tk.CENTER)
         self.joyst_frames.pack(anchor=tk.S)
 
-        self.kbr(Kb.rl_ch_e,Kb.tb_ch_e)
+        self.kbr(Kb.rl_ch_e, Kb.tb_ch_e)
         self.j_com()
         # self.joysticks()
         self.create_menu()
-        # self.tip_touch(x=16)
-        self.window0.bind("<Key>", self.scan_key)
-        self.window0.bind("<Return>", self.scan_com_e)
-        self.window0.bind('<space>', self.scan_com_sp)
-        self.window0.bind('<Control_L>', self.scan_com_ct)
-        self.window0.bind('<Alt_L>', self.scan_com_al)
-        self.window0.bind('<Shift_L>', self.scan_com_sl)
-        self.window0.bind('<Shift_R>', self.scan_com_sr)
-        self.window0.bind("<Delete>", self.scan_com_d)
-        self.window0.bind('<BackSpace>', self.scan_key_bk)
-        # self.window0.bind('<KeyPress>', self.press_key)
-        self.window0.bind('<KeyRelease>', self.release_key)
+        self.tip_touch(x=16)
+        # self.window0.bind("<Key>", self.scan_key)
+        self.window0.bind_all("<Return>", self.scan_com_e)
+        self.window0.bind_all('<space>', self.scan_com_sp)
+        self.window0.bind_all('<Control_L>', self.scan_com_ct)
+        self.window0.bind_all('<Alt_L>', self.scan_com_al)
+        self.window0.bind_all('<Shift_L>', self.scan_com_sl)
+        self.window0.bind_all('<Shift_R>', self.scan_com_sr)
+        self.window0.bind_all("<Delete>", self.scan_com_d)
+        self.window0.bind_all('<BackSpace>', self.scan_key_bk)
+        self.window0.bind_all('<KeyPress>', self.press_key)
+        self.window0.bind_all('<KeyRelease>', self.release_key)
         # self.n_tip = 16
 
         self.window0.mainloop()
 
 
-    def scan_com_e(self, event):
+    def scan_com_e(self, event=None):
         self.joystick_r()
 
-    def scan_com_sp(self, event):
-        self.joystick_r()
-        self.tip_touch(16)
-
-    def scan_key_bk(self, event):
-        self.joystick_l()
-
-    def scan_com_ct(self, event):
-        self.joystick_l()
-
-    def scan_com_al(self, event):
+    def scan_com_sp(self, event=None):
         self.joystick_r()
 
-
-    def scan_com_d(self,event):
+    def scan_key_bk(self, event=None):
         self.joystick_l()
 
-    def scan_com_sl(self,event):
+    def scan_com_ct(self, event=None):
         self.joystick_l()
 
-    def scan_com_sr(self,event):
+    def scan_com_al(self, event=None):
         self.joystick_r()
 
-    # def press_key(self, event):
-    #     print (f" event press")
 
-    def release_key(self, event):
-        print(f" pelease event key")
+    def scan_com_d(self,event=None):
+        self.joystick_l()
 
-    def scan_key(self,event):
+    def scan_com_sl(self,event=None):
+        self.joystick_l()
+
+    def scan_com_sr(self,event=None):
+        self.joystick_r()
+
+    def press_key(self, event=None):
         for i in range(15):
             i2 = Kb.ch_e[i]
             if event.char in i2:
                 # print(f" number press {i}")
                 self.tip_touch(i)
-        # print(f" letter {event.char}")
+
+        # print (f"{event.char} - event press")
+
+    def release_key(self, even=None):
+        time.sleep(0.5)
+        self.tip_touch(16)
+
+        print(f" release event key")
+
+    # def scan_key(self,event):
+    #     for i in range(15):
+    #         i2 = Kb.ch_e[i]
+    #         if event.char in i2:
+    #             print(f" number press {i}")
+    #             self.tip_touch(i)
+    #     print(f" letter {event.char}")
 
     def kbr(self, x, y):
         stp = 0
@@ -140,9 +167,9 @@ class EditorMKPs:
                 rt_ch.grid(row=1, column=2)
                 # tip.grid(row=1, column=1)
 
-            stp +=4
+            stp += 4
 
-    def tip_touch(self, x = 16):
+    def tip_touch(self, x):
         for out_row in range(3):
             for out_col in range(5):
                 ns = out_row * 5 + out_col
@@ -154,9 +181,8 @@ class EditorMKPs:
                     tip = tk.Label(tp, text="x", bg=Kb.bk_gr0)
                 tip.pack()
 
-
     def j_com(self):
-        back =tk.Label(self.joyst_frames, text= Kb.joysticks[0])
+        back = tk.Label(self.joyst_frames, text= Kb.joysticks[0])
         shift1 = tk.Label(self.joyst_frames, text=Kb.joysticks[1])
         # jst1 = tk.Label(self.joyst_frames, text="x", bg=Kb.bk_gr0)
         dl = tk.Label(self.joyst_frames, text=Kb.joysticks[2])
@@ -183,13 +209,12 @@ class EditorMKPs:
         jst2 = tk.Label(self.joyst_frames, text="x", bg=Kb.bk_gr0)
         jst1.grid(row=1, column=1)
         jst2.grid(row=1, column=4)
-        
+
     def joystick_r(self):
         jst2 = tk.Label(self.joyst_frames, text="X", fg=Kb.akitv_text, bg=Kb.activ_bg)
         jst1 = tk.Label(self.joyst_frames, text="x", bg=Kb.bk_gr0)
         jst2.grid(row=1, column=4)
         jst1.grid(row=1, column=1)
-
 
     def create_menu(self):
         menu = tk.Menu(self.window0)
