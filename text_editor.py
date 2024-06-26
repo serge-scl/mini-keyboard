@@ -76,7 +76,7 @@ class EditorMKPs:
         self.j_com()
         # self.joysticks()
         self.create_menu()
-        self.tip_touch(x=16)
+        # self.tip_touch(x=16)
         # self.window0.bind("<Key>", self.scan_key)
         self.window0.bind_all("<Return>", self.scan_com_e)
         self.window0.bind_all('<space>', self.scan_com_sp)
@@ -87,51 +87,62 @@ class EditorMKPs:
         self.window0.bind_all("<Delete>", self.scan_com_d)
         self.window0.bind_all('<BackSpace>', self.scan_key_bk)
         self.window0.bind_all('<KeyPress>', self.press_key)
+        # self.window0.bind_all('<Return>', self.press_key)
         self.window0.bind_all('<KeyRelease>', self.release_key)
         # self.n_tip = 16
 
         self.window0.mainloop()
 
-
     def scan_com_e(self, event=None):
-        self.joystick_r()
+        self.joystick_r(1)
 
     def scan_com_sp(self, event=None):
-        self.joystick_r()
+        self.joystick_r(1)
 
     def scan_key_bk(self, event=None):
-        self.joystick_l()
+        self.joystick_l(1)
 
     def scan_com_ct(self, event=None):
-        self.joystick_l()
+        self.joystick_l(1)
 
     def scan_com_al(self, event=None):
-        self.joystick_r()
+        self.joystick_r(1)
 
+    def scan_com_d(self, event=None):
+        self.joystick_l(1)
 
-    def scan_com_d(self,event=None):
-        self.joystick_l()
+    def scan_com_sl(self, event=None):
+        self.joystick_l(1)
 
-    def scan_com_sl(self,event=None):
-        self.joystick_l()
-
-    def scan_com_sr(self,event=None):
-        self.joystick_r()
+    def scan_com_sr(self, event=None):
+        self.joystick_r(1)
 
     def press_key(self, event=None):
         for i in range(15):
             i2 = Kb.ch_e[i]
+            # if event.char == "Return":
+            #     self.joystick_r()
             if event.char in i2:
                 # print(f" number press {i}")
                 self.tip_touch(i)
-
         # print (f"{event.char} - event press")
+
+        # ......................................
+
+        # This point is a basic feature.
+        # Touching the tip of the pyramid is the first part of pressing,
+        # the second part is moving to the desired symbol.
+        # This cannot be simulated on a pushbutton keyboard that has only two states
+        # .....................................
+
 
     def release_key(self, even=None):
         time.sleep(0.5)
         self.tip_touch(16)
+        self.joystick_r()
+        self.joystick_l()
 
-        print(f" release event key")
+        # print(f" release event key")
 
     # def scan_key(self,event):
     #     for i in range(15):
@@ -169,7 +180,7 @@ class EditorMKPs:
 
             stp += 4
 
-    def tip_touch(self, x):
+    def tip_touch(self, x=16):
         for out_row in range(3):
             for out_col in range(5):
                 ns = out_row * 5 + out_col
@@ -182,7 +193,7 @@ class EditorMKPs:
                 tip.pack()
 
     def j_com(self):
-        back = tk.Label(self.joyst_frames, text= Kb.joysticks[0])
+        back = tk.Label(self.joyst_frames, text=Kb.joysticks[0])
         shift1 = tk.Label(self.joyst_frames, text=Kb.joysticks[1])
         # jst1 = tk.Label(self.joyst_frames, text="x", bg=Kb.bk_gr0)
         dl = tk.Label(self.joyst_frames, text=Kb.joysticks[2])
@@ -204,17 +215,26 @@ class EditorMKPs:
         enter.grid(row=2, column=4)
         blank.grid(row=1, column=5)
 
-    def joystick_l(self):
-        jst1 = tk.Label(self.joyst_frames, text="X", fg=Kb.akitv_text, bg=Kb.activ_bg)
-        jst2 = tk.Label(self.joyst_frames, text="x", bg=Kb.bk_gr0)
-        jst1.grid(row=1, column=1)
-        jst2.grid(row=1, column=4)
+    def joystick_l(self, x=0):
+        if x == 1:
+            jst1 = tk.Label(self.joyst_frames, text="X", fg=Kb.akitv_text, bg=Kb.activ_bg)
+            # jst2 = tk.Label(self.joyst_frames, text="x", bg=Kb.bk_gr0)
+            jst1.grid(row=1, column=1)
+            # jst2.grid(row=1, column=4)
+        else:
+            jst1 = tk.Label(self.joyst_frames, text="x", bg=Kb.bk_gr0)
+            jst1.grid(row=1, column=1)
 
-    def joystick_r(self):
-        jst2 = tk.Label(self.joyst_frames, text="X", fg=Kb.akitv_text, bg=Kb.activ_bg)
-        jst1 = tk.Label(self.joyst_frames, text="x", bg=Kb.bk_gr0)
-        jst2.grid(row=1, column=4)
-        jst1.grid(row=1, column=1)
+    def joystick_r(self, x=0):
+        if x == 1:
+            jst2 = tk.Label(self.joyst_frames, text="X", fg=Kb.akitv_text, bg=Kb.activ_bg)
+            # jst1 = tk.Label(self.joyst_frames, text="x", bg=Kb.bk_gr0)
+            jst2.grid(row=1, column=4)
+            # jst1.grid(row=1, column=1)
+        else:
+            jst2 = tk.Label(self.joyst_frames, text="x", bg=Kb.bk_gr0)
+            jst2.grid(row=1, column=4)
+
 
     def create_menu(self):
         menu = tk.Menu(self.window0)
@@ -250,4 +270,3 @@ class EditorMKPs:
 if __name__ == "__main__":
     # print(Kb.ch_e)
     EditorMKPs()
-
