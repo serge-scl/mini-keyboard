@@ -59,12 +59,39 @@ class Kb:
     ch_ru = [x + y for x, y in zip(ch_up_ru, rl_ch_lw_ru)]
 
 
+class ScrollTxt(tk.Text):
+
+    def __init__(self, master=None, **kw):
+        super().__init__(master=None, **kw)
+        self.frame = tk.Frame(master)
+        self.vbar = tk.Scrollbar(self.frame, command=self.yview)
+        self.vbar.pack(side="right", fill="y")
+        self.hbar = tk.Scrollbar(
+            self.frame, orient="horizontal", command=self.xview)
+        self.hbar.pack(side="bottom", fill="x")
+        kw.update({'yscrollcommand': self.vbar.set})
+        kw.update({'xscrollcommand': self.hbar.set})
+        tk.Text.__init__(self, self.frame, **kw)
+        self.pack(anchor=tk.N, fill="both", expand=True)
+        text_meths = vars(tk.Text).keys()
+        methods = vars(tk.Pack).keys() | vars(tk.Grid).keys() | vars(tk.Place).keys()
+        methods = methods.difference(text_meths)
+
+        for m in methods:
+            if m[0] != '_' and m != 'config' and m != 'configure':
+                setattr(self, m, getattr(self.frame, m))
+
+    def __str__(self):
+        return str(self.frame)
+
+
 class EditorMKPs:
     def __init__(self):
         self.window0 = tk.Tk()
-        self.window0.geometry("300x450")
+        self.window0.geometry("300x680")
         self.window0.title("pyramid keyboard editor")
-        self.text_area = tk.Text(self.window0, height=10, wrap="word")
+        self.text_area = ScrollTxt(self.window0, undo=True)
+        # self.text_area = tk.Text(self.window0, height=10, wrap="word")
         self.kb_frame = tk.Frame(self.window0)
         self.joyst_frames = tk.Frame(self.window0)
 
@@ -128,13 +155,11 @@ class EditorMKPs:
         # print (f"{event.char} - event press")
 
         # ......................................
-
         # This point is a basic feature.
         # Touching the tip of the pyramid is the first part of pressing,
         # the second part is moving to the desired symbol.
         # This cannot be simulated on a pushbutton keyboard that has only two states
         # .....................................
-
 
     def release_key(self, even=None):
         time.sleep(0.5)
