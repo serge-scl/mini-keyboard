@@ -1,13 +1,11 @@
-Mouse Keyboard Pyramids (MKP) I suggest being quite critical of my
-device. Just as the very first computer mouse is very different from
-those we now use, I also understand that my mouse offered here is only
-the very beginning of development. However, I am sure that this is all I
-am proposing here, it should work, and I have already been able to check
-some components of the device, which led to writing a completely working
-code. In the top directory I placed both individual files and folders.
-Individual files written in Python also come in two types. For some
-reasons, I have not yet started placing them in different directories. I
-decided to use a Raspberry Pi Pico microcontroller and code in
+# Mouse Keyboard Pyramids (MKP)
+## License   CC-BY-4.0 
+A bit of history
+![](datasheet/mouse2_1960-2024.png)
+In the root directory I placed  files and folders.
+Individual files  in Python  come in two types. For some
+reasons, I have not yet started placing them in different directories.
+I decided to use a Raspberry Pi Pico microcontroller and code in
 CircuitPython Adafruit. In addition, in the same root directory there
 are text editor files in just Python. Since the mouse is also a
 keyboard, the text editor should make it easier to learn typing methods
@@ -55,23 +53,9 @@ two millimeters from the Hall sensor, it provides sufficient sensitivity
 at the analog input in the range from the lower barrier to 65000. I used
 analog sensors of fairly low quality. I was unable to purchase Hall
 sensors with PWM output. But if they show good results, I would
-recommend them. The main problem with calibrating and setting up this
-sensor mechanism is obviously that all the rods pass through the holes
-of the movable grid with the same gap. To do this, I propose to assemble
-this working unit as follows. The rod rests on the foot, which is in
-contact with the motherboard. This part, into which the rod rests, is in
-turn made of soft metal, such as solder. When installing, the rod
-passing through the mesh hole simply lightly touches the solder foot.
-Then an installation matrix or cover is placed on top, having the same
-shape from the inside as a pyramid keyboard. But the matrix is made of
-hard material such as aluminum. This ensures that the top points of the
-rods are precisely aligned. Then we begin to move the perforated mesh,
-shifting it in such a way that all four directions of the XY axes are
-shifted by the amount of the gap. This way we align all the rods. Then
-we create a load or force on the matrix cover so that the rods enter the
-solder, locking in this position. After which the cover can be removed
-and replaced with the pyramid keyboard itself. I decided to use the
-MPR121 as a capacitive touch sensor controller. This is a fairly budget
+recommend them.
+I decided to use the MPR121 as a capacitive touch sensor controller.
+ This is a fairly budget
 chip, and since I write code in CircuitPython, Adafruit has its own
 library for the MPR121. It should be noted that the choice of
 CircuitPython was due to the fact that it also has good HIDs, which is
@@ -114,4 +98,5 @@ Wi-Fi. It would be great if someone offers their own option. Here is the
 first brief part of my instructions. I will publish the following as new
 ideas, questions and development stages appear.
 
-Serge Sokolov sergesclv@gmail.com sergesclv3@protonmail.com
+Serge Sokolov sergesclv@gmail.com
+ sergesclv3@protonmail.com
