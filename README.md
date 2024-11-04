@@ -21,14 +21,7 @@ Separately, you can highlight the parts of the moving mechanism. The
 electromechanical circuit of a pyramid keyboard works as follows. The
 upper part of the keyboard is the pyramids themselves or a matrix of
 pyramids made of a material close to silicone rubber with symbols
-printed on the edges. So we start typing the text. You tilt the tip of
-the pyramid with your fingertip towards the desired symbol. By the way,
-according to my plan, it is not at all necessary to look at the keyboard
-pyramids themselves at this time. If there is a Text Editor on the
-screen, then touching the tip of the pyramid can be seen there. This is
-like a blind typing of the text. Probably the fact that there are five
-pyramids in a row, as well as fingers, greatly facilitates the intuitive
-understanding of this process of touch typing text. My cardinal
+printed on the edges.  My cardinal
 difference from the usual standard keyboard is that touching is not text
 input. Below the tip of the pyramid is a solid rod of conductive
 material that runs vertically downwards. There it interacts with a
@@ -65,11 +58,7 @@ purpose joysticks here. For joysticks I have allocated separate pins.
 For the keyboard I made a 5X3 matrix, five columns and three rows. Since
 my matrix is much simpler than the Touchpad, I connected the
 intersections through diodes. All this has been tested and works. You
-can see this in more detail on the diagram in KiCad. The work is not yet
-completed. I now have to work with another, so to speak, mouse-like
-essence of my device. I don\'t think there will be any problems there,
-since I intend to use standard solutions. Except, of course, that
-everything there will be located on the same motherboard. In the
+can see this in more detail on the diagram in KiCad. In the
 datasheet I indicated the PMW3360 optical mouse sensor, but this does
 not mean that you must use it. The same goes for buttons and encoder. I
 made a very small innovation, which, however, you may have already
@@ -94,9 +83,7 @@ be completely assembled and disassembled up to half without having a
 screwdriver at hand. The mouse will be wireless, although a budget
 option with a wire is also possible, but I haven't made the final choice
 here yet. For now, it is possible to use Raspberry Pi Pico with built-in
-Wi-Fi. It would be great if someone offers their own option. Here is the
-first brief part of my instructions. I will publish the following as new
-ideas, questions and development stages appear.
+Wi-Fi. It would be great if someone offers their own option. 
 
 Serge Sokolov sergesclv@gmail.com
  sergesclv3@protonmail.com
