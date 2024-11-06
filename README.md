@@ -77,13 +77,15 @@ the side PCBs to the motherboard. Both side walls with batteries and PCB
 are removable, representing separate modules. They are inserted into
 slots and connectors and the whole thing is then secured with a rear top
 cover with rods. No screws, everything is held on the bottom cover
-latch. A single four screws hold the keyboard slide mechanism, the
+latch.  Four screws hold the keyboard slide mechanism, the
 motherboard, and the bottom of the mouse together. Thus, the device can
 be completely assembled and disassembled up to half without having a
 screwdriver at hand. The mouse will be wireless, although a budget
 option with a wire is also possible, but I haven't made the final choice
 here yet. For now, it is possible to use Raspberry Pi Pico with built-in
 Wi-Fi. It would be great if someone offers their own option. 
+Returning to the text editor, I want to add that the main feature here is that touching the tip of the pyramid is not yet entering a symbol. But you can already see on the screen where your finger is if you use a text editor. This gives a very simple opportunity to learn the touch typing method.
+![](datasheet/text_editor1.png)
 
 Serge Sokolov sergesclv@gmail.com
  sergesclv3@protonmail.com
