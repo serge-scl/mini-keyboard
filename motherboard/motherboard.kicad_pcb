@@ -41,6 +41,7 @@
 	(setup
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
+		(grid_origin 148 105)
 		(pcbplotparams
 			(layerselection 0x00010fc_ffffffff)
 			(plot_on_all_layers_selection 0x0000000_00000000)
@@ -669,7 +670,7 @@
 			(pintype "passive")
 			(uuid "51a78fd2-928e-46fb-84f1-a7efaa8442b8")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1066,7 +1067,7 @@
 			(pintype "passive")
 			(uuid "71c13e42-4392-4732-b203-7c7e05092908")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1471,7 +1472,7 @@
 			(pintype "power_in")
 			(uuid "66ca6df8-09d7-4f8e-bee3-b4abbf93f3ec")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Package_TO_SOT_THT.3dshapes/TO-92S.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/TO-92S.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -2412,7 +2413,7 @@
 			(pintype "power_in")
 			(uuid "02359b03-4afd-422e-b1f3-6b97325cb748")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Package_TO_SOT_THT.3dshapes/TO-92S.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/TO-92S.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -4433,7 +4434,7 @@
 			(pintype "passive")
 			(uuid "000f7f15-e941-4652-86a7-65de7deefecf")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -4877,7 +4878,7 @@
 			(pintype "passive+no_connect")
 			(uuid "9cf43076-18a1-462b-9c97-88acb00965fa")
 		)
-		(model "/home/sergesclv/Documents/pyramid keyboard/kicad/import/pmw3360_chip.step"
+		(model "${KICAD8_3DMODEL_DIR}/pmw3360_chip.step"
 			(offset
 				(xyz 1 0 2.5)
 			)
@@ -5182,7 +5183,7 @@
 			(pintype "passive")
 			(uuid "c78a0641-4645-46eb-80b8-e3122f0c1ad2")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -5581,7 +5582,7 @@
 			(pintype "passive")
 			(uuid "09b05bb0-c165-482c-adde-5e4bccf9aaf2")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -5755,7 +5756,7 @@
 			(pintype "bidirectional")
 			(uuid "720d84a5-d456-43d5-8a65-667f26a4e24a")
 		)
-		(model "/home/sergesclv/Documents/pyramid keyboard/kicad/import/mose_switch2.step"
+		(model "${KICAD8_3DMODEL_DIR}/mose_switch2.step"
 			(offset
 				(xyz 6.2 -3 0.1)
 			)
@@ -6163,7 +6164,7 @@
 			(pintype "passive")
 			(uuid "2082e518-7956-4bb4-b172-c4764b119882")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -7125,7 +7126,7 @@
 			(pintype "passive")
 			(uuid "c792ff08-ed34-4063-b3aa-e3c8a40916e6")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -7640,7 +7641,7 @@
 			(pintype "passive")
 			(uuid "6e54c380-4852-4722-b37f-19fd09d3c8f2")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -8037,7 +8038,7 @@
 			(pintype "passive")
 			(uuid "c7fafc2a-d961-4723-958d-cb9e27d7d061")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -8739,7 +8740,7 @@
 			(pintype "passive")
 			(uuid "3e9a77a5-0305-445c-b6b5-dc55899bd086")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -9275,7 +9276,7 @@
 			(pintype "passive")
 			(uuid "2c96a4be-3a84-4f21-848e-840db597ac89")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -9790,7 +9791,7 @@
 			(pintype "passive")
 			(uuid "46e52dca-b822-4c3b-9426-ea801936b124")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -10095,7 +10096,7 @@
 			(pintype "passive")
 			(uuid "8345b1f5-5ace-44b0-849f-a69821509983")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -10400,7 +10401,7 @@
 			(pintype "passive")
 			(uuid "6d72e6be-940a-4153-8103-2163ec0f6029")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -10705,7 +10706,7 @@
 			(pintype "passive")
 			(uuid "4edc7873-333b-43b2-90ec-b5c87dce44fc")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -11075,7 +11076,7 @@
 			(pintype "output")
 			(uuid "f3c68c6f-ffae-4f95-8166-23da4672383f")
 		)
-		(model "/home/sergesclv/Documents/pyramid keyboard/export/encoder3.step"
+		(model "${KICAD8_3DMODEL_DIR}/encoder3.step"
 			(offset
 				(xyz 6.5 -3 9.5)
 			)
@@ -11347,7 +11348,7 @@
 			(pintype "power_out")
 			(uuid "4e867f97-33c8-40b0-af28-0364779efab7")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-5.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/SOT-23-5.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -11883,7 +11884,7 @@
 			(pintype "passive")
 			(uuid "ecaf1ca7-09c0-44c5-9e27-06081b83e7ad")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -13259,7 +13260,7 @@
 			(pintype "power_in")
 			(uuid "78f4124c-f4e9-43dc-8d7d-a783207a1b73")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Package_TO_SOT_THT.3dshapes/TO-92S.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/TO-92S.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -14145,7 +14146,7 @@
 			(pintype "passive")
 			(uuid "6d6920ca-93af-4b5b-90b5-2eb1e7d6fd5e")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -14636,7 +14637,7 @@
 			(pintype "passive")
 			(uuid "9bf7416d-40ab-4c4f-b930-5ac0d1382153")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -14941,7 +14942,7 @@
 			(pintype "passive")
 			(uuid "36d8cf7d-6e23-48b6-a4f8-a28b254caf3f")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -15464,7 +15465,7 @@
 			(pintype "power_in")
 			(uuid "887450d6-4130-4885-b43f-2dada0ce3bca")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Package_TO_SOT_THT.3dshapes/TO-92S.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/TO-92S.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -16496,7 +16497,7 @@
 			(pintype "power_in")
 			(uuid "ce1da419-12f4-4cf9-a27a-991588dbbae6")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Package_TO_SOT_THT.3dshapes/TO-92S.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/TO-92S.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -16893,7 +16894,7 @@
 			(pintype "passive")
 			(uuid "5af389cc-947d-43f9-88fa-c4e6c56aafe4")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -16935,7 +16936,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 0 0 -90)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e2814542-76c7-4ff1-a9ec-f6410ea4f7ba")
@@ -16947,7 +16948,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1898602f-7b2b-405b-8a74-769c11382224")
@@ -16959,7 +16960,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7ad16774-ef1d-4bb2-ae1e-c4bfa8fae23e")
@@ -17067,7 +17068,7 @@
 			(pintype "bidirectional")
 			(uuid "2b66803c-5664-41f5-91f0-fd0a355416df")
 		)
-		(model "/home/sergesclv/Documents/pyramid keyboard/kicad/import/mose_switch2.step"
+		(model "${KICAD8_3DMODEL_DIR}/mose_switch2.step"
 			(offset
 				(xyz 6.2 -3 0.1)
 			)
@@ -17372,7 +17373,7 @@
 			(pintype "passive")
 			(uuid "0ecdc8e9-ea03-46bc-92ad-7164d45754c0")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -17861,7 +17862,7 @@
 			(pintype "passive")
 			(uuid "38d2d507-f60f-4fb6-b99f-ab3b8c65a031")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -18166,7 +18167,7 @@
 			(pintype "passive")
 			(uuid "256d4a9e-3f67-450b-bf6a-437af181e058")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -18796,7 +18797,7 @@
 			(pintype "passive")
 			(uuid "46d50c86-4336-42bf-b1bb-0f94240eb05a")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -18838,7 +18839,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 0 0 -90)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dd0d43ff-ef72-4084-8b39-84ac3b6f228c")
@@ -18850,7 +18851,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "39dfba99-a8c5-4230-a321-8f4ff5fb25bd")
@@ -18862,7 +18863,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "118bb6ae-d1ba-4804-9236-500acf4fe19f")
@@ -18970,7 +18971,7 @@
 			(pintype "bidirectional")
 			(uuid "8388e18f-b7db-49be-b831-3e2eae6fc144")
 		)
-		(model "/home/sergesclv/Documents/pyramid keyboard/kicad/import/mose_switch2.step"
+		(model "${KICAD8_3DMODEL_DIR}/mose_switch2.step"
 			(offset
 				(xyz 6.2 -3 0.1)
 			)
@@ -19275,7 +19276,7 @@
 			(pintype "passive")
 			(uuid "bceeea2c-c867-42a4-8216-ebb9cfca5163")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -20013,7 +20014,7 @@
 			)
 			(uuid "fcbd7851-7a64-4394-87d7-0a4cb7d1e2ba")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/UQFN-20_3x3mm_P0.4mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/UQFN-20-1EP_3x3mm_P0.4mm_EP1.85x1.85mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -20529,7 +20530,7 @@
 			(pintype "passive")
 			(uuid "abf5ad98-24bf-4721-835d-c69c94bda359")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -20834,7 +20835,7 @@
 			(pintype "passive")
 			(uuid "86c05588-d656-4095-952a-2668a7345604")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -21452,7 +21453,7 @@
 			(pintype "power_in")
 			(uuid "2430e3cb-6d78-4404-ad78-a18c2c537282")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Package_TO_SOT_THT.3dshapes/TO-92S.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/TO-92S.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -21757,7 +21758,7 @@
 			(pintype "passive")
 			(uuid "5508bca3-fbde-4e46-bcdc-25f515ced94c")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -22062,7 +22063,7 @@
 			(pintype "passive")
 			(uuid "c05cde5b-4f28-4b1e-97ae-921119a957e5")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-523.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/D_SOD-523.step"
 			(offset
 				(xyz 0 0 0)
 			)

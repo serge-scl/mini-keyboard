@@ -80,6 +80,7 @@
 		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
+		(grid_origin 106.467847 105.542824)
 		(pcbplotparams
 			(layerselection 0x00010fc_ffffffff)
 			(plot_on_all_layers_selection 0x0000000_00000000)
@@ -338,7 +339,7 @@
 			(pintype "passive")
 			(uuid "08ec951f-e7eb-41cf-9589-697107a98e88")
 		)
-		(model ":KICAD7_3DMODEL_DIR:LED_SMD.3dshapes/LED_1206_3216Metric_Castellated.step"
+		(model "${KICAD8_3DMODEL_DIR}/LED_1206_3216Metric_Castellated.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -670,7 +671,7 @@
 			(pintype "passive")
 			(uuid "49b5f540-e128-4e08-bb09-f321f8e64056")
 		)
-		(model ":KICAD7_3DMODEL_DIR:LED_SMD.3dshapes/LED_1206_3216Metric_Castellated.step"
+		(model "${KICAD8_3DMODEL_DIR}/LED_1206_3216Metric_Castellated.step"
 			(offset
 				(xyz 0 0 0)
 			)

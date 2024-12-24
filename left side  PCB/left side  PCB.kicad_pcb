@@ -80,6 +80,7 @@
 		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
+		(grid_origin 91 130)
 		(pcbplotparams
 			(layerselection 0x00010fc_ffffffff)
 			(plot_on_all_layers_selection 0x0000000_00000000)
@@ -417,7 +418,7 @@
 			(pintype "passive")
 			(uuid "6a82cb3b-8a09-4422-a1f2-529a5f400c81")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/R_0603_1608Metric.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -524,7 +525,7 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "F.Cu")
 		(uuid "9e6bd261-8eda-4606-8200-d946bed1f62b")
-		(at 164 126)
+		(at 158.9375 127.05)
 		(descr "SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "Q2"
@@ -760,7 +761,7 @@
 			(pintype "passive")
 			(uuid "93632d77-ecce-46c9-a0ab-3ec0f94344b6")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/SOT-23.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -867,7 +868,7 @@
 	(footprint "mother_conn_side:btttr"
 		(layer "F.Cu")
 		(uuid "cebb9021-66d3-4116-98d4-5e6f3c1552be")
-		(at 121 125)
+		(at 95 120)
 		(property "Reference" "U1"
 			(at -2.5 -3 0)
 			(unlocked yes)
@@ -959,7 +960,7 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "F.Cu")
 		(uuid "f2f99378-a6bf-4ba2-b4e0-59dfe4166703")
-		(at 153 128)
+		(at 149.9375 127.95)
 		(descr "SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "Q1"
@@ -1195,7 +1196,7 @@
 			(pintype "passive")
 			(uuid "61350531-e38f-4ca2-8ab7-91e5967cbc08")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/SOT-23.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1403,7 +1404,7 @@
 			(pintype "passive")
 			(uuid "396071f4-5c11-49e9-97b1-c302b0f3d9c8")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/R_0603_1608Metric.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1993,7 +1994,7 @@
 	)
 	(gr_line
 		(start 181 117)
-		(end 117 117)
+		(end 91 117)
 		(stroke
 			(width 0.16)
 			(type solid)
@@ -2012,8 +2013,8 @@
 		(uuid "5cbb5968-dbb5-4b84-864a-ead1cacf75b9")
 	)
 	(gr_circle
-		(center 127 126.5)
-		(end 125 126.5)
+		(center 122 127)
+		(end 124 127)
 		(stroke
 			(width 0.16)
 			(type solid)
@@ -2023,7 +2024,7 @@
 		(uuid "6a955fc7-39d9-4c75-9a69-676ca8c0b9b2")
 	)
 	(gr_line
-		(start 117 130)
+		(start 91 130)
 		(end 181 130)
 		(stroke
 			(width 0.16)
@@ -2033,8 +2034,8 @@
 		(uuid "afb8e687-4a13-41a1-b8c0-89a749e897fe")
 	)
 	(gr_line
-		(start 117 117)
-		(end 117 130)
+		(start 91 117)
+		(end 91 130)
 		(stroke
 			(width 0.16)
 			(type solid)
@@ -2043,8 +2044,8 @@
 		(uuid "bb7f0588-d4d8-44bf-9ebf-3c533fe4d6ae")
 	)
 	(gr_circle
-		(center 171 126.5)
-		(end 169 126.5)
+		(center 166 127)
+		(end 168 127)
 		(stroke
 			(width 0.16)
 			(type solid)
