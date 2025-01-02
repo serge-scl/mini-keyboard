@@ -126,11 +126,11 @@
 	(footprint "LED_SMD:LED_PLCC_2835"
 		(layer "F.Cu")
 		(uuid "5914939e-95f1-4848-b987-27742538e48f")
-		(at 101.6 105.1 90)
+		(at 102 106 90)
 		(descr "https://www.luckylight.cn/media/component/data-sheet/R2835BC-B2M-M10.pdf")
 		(tags "LED")
 		(property "Reference" "D1"
-			(at 0 -2.4 90)
+			(at -4 -1 90)
 			(layer "F.SilkS")
 			(uuid "2a4111b7-8149-4814-9344-3b8119cd75e4")
 			(effects
@@ -141,7 +141,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 0 2.475 90)
+			(at -3.542824 1.467847 90)
 			(layer "F.Fab")
 			(uuid "a686ed7c-c2d1-4d29-9d54-727faf9fd6bf")
 			(effects
@@ -356,7 +356,7 @@
 		(uuid "b53297b9-b708-4ab8-87e2-5856dafbf067")
 		(at 121 107.4 90)
 		(property "Reference" "U1"
-			(at 1.9 -1.4 0)
+			(at 1.9 -0.532153 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "5e6153e6-2c19-46de-9a8e-b310a2a07861")
@@ -458,11 +458,11 @@
 	(footprint "LED_SMD:LED_PLCC_2835"
 		(layer "F.Cu")
 		(uuid "d10ed321-fe4a-4b2e-8c4a-eae42c56c9ad")
-		(at 111.5 105.2 90)
+		(at 112 106 90)
 		(descr "https://www.luckylight.cn/media/component/data-sheet/R2835BC-B2M-M10.pdf")
 		(tags "LED")
 		(property "Reference" "D2"
-			(at 0 -2.4 90)
+			(at -3.9 -2 90)
 			(layer "F.SilkS")
 			(uuid "f6a5c856-f2b5-40eb-a958-b666a0d408a0")
 			(effects
@@ -473,7 +473,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 0 2.475 90)
+			(at -3.542824 1.467847 90)
 			(layer "F.Fab")
 			(uuid "2b25e886-ded1-450a-ada1-ece4208052e4")
 			(effects
@@ -790,9 +790,9 @@
 	(footprint "conn_ld_pcb:led_conn"
 		(layer "B.Cu")
 		(uuid "10356099-7b8d-4914-a3cc-f6f01f45e7f8")
-		(at 84.1 102 180)
+		(at 95.467847 99.542824 180)
 		(property "Reference" "U5"
-			(at -0.2 -1.9 0)
+			(at -2 0 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "9208ea78-8dde-4b3d-91e9-5755ab5efd9a")
@@ -805,7 +805,7 @@
 			)
 		)
 		(property "Value" "gnd_conn"
-			(at -4.7 0 0)
+			(at 0 -2 0)
 			(unlocked yes)
 			(layer "B.Fab")
 			(uuid "1bf7d0f9-0dcf-4d7c-b58c-318e3dc42bc9")
@@ -885,7 +885,7 @@
 	(footprint "conn_ld_pcb:led_conn"
 		(layer "B.Cu")
 		(uuid "554fb619-bd23-4512-92e0-1256ad13b38d")
-		(at 128.8 109)
+		(at 128.467847 111.542824)
 		(property "Reference" "U4"
 			(at -0.1 -1.9 0)
 			(unlocked yes)
@@ -900,7 +900,7 @@
 			)
 		)
 		(property "Value" "power_conn"
-			(at -5.4 0.1 0)
+			(at -5 -2 0)
 			(unlocked yes)
 			(layer "B.Fab")
 			(uuid "5f48b0f2-82cf-40ce-afac-440f97643c36")
@@ -980,9 +980,9 @@
 	(footprint "conn_ld_pcb:led_conn"
 		(layer "B.Cu")
 		(uuid "81de41d5-1280-4e35-ad22-b76f8a8e836b")
-		(at 84.1 109 180)
+		(at 86.467847 99.542824 180)
 		(property "Reference" "U2"
-			(at 0.1 1.7 0)
+			(at 2 -2 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "9c2999b2-1cf1-4204-9d23-243401b77aa3")
@@ -995,7 +995,7 @@
 			)
 		)
 		(property "Value" "gnd_conn"
-			(at -4.8 0 0)
+			(at -4.8 -1 0)
 			(unlocked yes)
 			(layer "B.Fab")
 			(uuid "755f94aa-38f0-4a64-a7c7-6c71cb18cddf")
@@ -1075,7 +1075,7 @@
 	(footprint "conn_ld_pcb:led_conn"
 		(layer "B.Cu")
 		(uuid "cdb426f9-d1a0-42f9-a1ec-cb48f333548f")
-		(at 128.8 102)
+		(at 122.467847 111.542824)
 		(property "Reference" "U3"
 			(at 0.2 1.8 0)
 			(unlocked yes)
@@ -1168,8 +1168,8 @@
 		)
 	)
 	(gr_circle
-		(center 106.467847 105.542824)
-		(end 104.967847 105.542824)
+		(center 107 106)
+		(end 109 106)
 		(stroke
 			(width 0.16)
 			(type solid)
@@ -1179,8 +1179,8 @@
 		(uuid "1a1ab354-5f85-45f9-938c-9f6c4c8c3ea2")
 	)
 	(gr_circle
-		(center 116.467847 105.542824)
-		(end 114.967847 105.542824)
+		(center 117 106)
+		(end 119 106)
 		(stroke
 			(width 0.16)
 			(type solid)
@@ -1190,8 +1190,8 @@
 		(uuid "1bf544e3-5940-4576-9291-2464e95c0ee2")
 	)
 	(gr_line
-		(start 113.467847 100.542824)
-		(end 129.967847 100.542824)
+		(start 114 101)
+		(end 131 101)
 		(stroke
 			(width 0.16)
 			(type solid)
@@ -1200,8 +1200,8 @@
 		(uuid "29e78086-2175-405e-9ba3-c48766d2f50c")
 	)
 	(gr_line
-		(start 99.467847 100.542824)
-		(end 99.467847 102.488602)
+		(start 100 98)
+		(end 100 103)
 		(stroke
 			(width 0.16)
 			(type solid)
@@ -1210,8 +1210,8 @@
 		(uuid "2d210a96-f81f-42a9-8bf4-1b43c11086f3")
 	)
 	(gr_circle
-		(center 126.467847 105.542824)
-		(end 124.967847 105.542824)
+		(center 127 106)
+		(end 129 106)
 		(stroke
 			(width 0.16)
 			(type solid)
@@ -1221,8 +1221,8 @@
 		(uuid "3aaee4c4-dbf7-49a5-a620-9465d8cc3ae7")
 	)
 	(gr_circle
-		(center 96.467847 105.542824)
-		(end 94.967847 105.542824)
+		(center 97 106)
+		(end 99 106)
 		(stroke
 			(width 0.16)
 			(type solid)
@@ -1232,8 +1232,8 @@
 		(uuid "42713045-fffd-4b2d-ae1e-7232d705fb12")
 	)
 	(gr_line
-		(start 129.967847 110.542824)
-		(end 82.967847 110.542824)
+		(start 131 114)
+		(end 83 114)
 		(stroke
 			(width 0.16)
 			(type solid)
@@ -1242,28 +1242,8 @@
 		(uuid "4c8eb964-bdf4-44de-90e9-e2ab82dd5313")
 	)
 	(gr_line
-		(start 103.467847 100.542824)
-		(end 109.467847 100.542824)
-		(stroke
-			(width 0.16)
-			(type solid)
-		)
-		(layer "Edge.Cuts")
-		(uuid "666713b0-70f4-42df-8761-f65bc212d03b")
-	)
-	(gr_line
-		(start 103.467847 100.542824)
-		(end 103.467847 102.488602)
-		(stroke
-			(width 0.16)
-			(type solid)
-		)
-		(layer "Edge.Cuts")
-		(uuid "6c2e273e-743c-4f1e-a647-4171f8122550")
-	)
-	(gr_line
-		(start 113.467847 100.542824)
-		(end 113.467847 102.505234)
+		(start 114 101)
+		(end 114 103)
 		(stroke
 			(width 0.16)
 			(type solid)
@@ -1272,18 +1252,8 @@
 		(uuid "7aed3a71-054b-4aaa-9c0a-030523c32827")
 	)
 	(gr_line
-		(start 109.467847 100.542824)
-		(end 109.467847 102.505234)
-		(stroke
-			(width 0.16)
-			(type solid)
-		)
-		(layer "Edge.Cuts")
-		(uuid "7dc880bc-e7eb-4cce-8d8c-0b65a9dd788e")
-	)
-	(gr_line
-		(start 113.467847 102.505234)
-		(end 109.467847 102.505234)
+		(start 114 103)
+		(end 100 103)
 		(stroke
 			(width 0.16)
 			(type solid)
@@ -1292,8 +1262,8 @@
 		(uuid "9157f4ae-0244-4ff1-9f73-3cb4cbb5f280")
 	)
 	(gr_line
-		(start 129.967847 100.542824)
-		(end 129.967847 110.542824)
+		(start 131 101)
+		(end 131 114)
 		(stroke
 			(width 0.16)
 			(type solid)
@@ -1302,8 +1272,8 @@
 		(uuid "94a873dc-af67-4ef9-8159-1f7c93eeb3d7")
 	)
 	(gr_line
-		(start 82.967847 100.542824)
-		(end 99.467847 100.542824)
+		(start 83 98)
+		(end 100 98)
 		(stroke
 			(width 0.16)
 			(type solid)
@@ -1312,8 +1282,8 @@
 		(uuid "9bb20359-0f8b-45bc-9d38-6626ed3a939d")
 	)
 	(gr_line
-		(start 82.967847 110.542824)
-		(end 82.967847 100.542824)
+		(start 83 114)
+		(end 83 98)
 		(stroke
 			(width 0.16)
 			(type solid)
@@ -1322,8 +1292,8 @@
 		(uuid "aa14c3bd-4acc-4908-9d28-228585a22a9d")
 	)
 	(gr_circle
-		(center 86.467847 105.542824)
-		(end 84.967847 105.542824)
+		(center 87 106)
+		(end 89 106)
 		(stroke
 			(width 0.16)
 			(type solid)
@@ -1331,15 +1301,5 @@
 		(fill none)
 		(layer "Edge.Cuts")
 		(uuid "c0515cd2-cdaa-467e-8354-0f6eadfa35c9")
-	)
-	(gr_line
-		(start 103.467847 102.488602)
-		(end 99.467847 102.488602)
-		(stroke
-			(width 0.16)
-			(type solid)
-		)
-		(layer "Edge.Cuts")
-		(uuid "e857610b-4434-4144-b04e-43c1ebdc5ceb")
 	)
 )
