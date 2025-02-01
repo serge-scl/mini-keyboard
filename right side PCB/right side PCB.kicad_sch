@@ -1058,6 +1058,80 @@
 			)
 		)
 	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x02_Counter_Clockwise")
+		(at 111.76 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dc6f634a-df61-4e0a-a454-e406825e200a")
+		(property "Reference" "J5"
+			(at 113.03 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_02x02_Counter_Clockwise"
+			(at 113.03 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_2x02_P2.00mm_Vertical"
+			(at 111.76 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 111.76 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x02, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 111.76 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "f9a5e635-fbfb-4b7a-b166-e9b1707f40ca")
+		)
+		(pin "3"
+			(uuid "c28dd5bb-8215-41c9-bb30-d2cbc56f8713")
+		)
+		(pin "2"
+			(uuid "4de844e7-65f8-4002-b0ac-b6257bd86285")
+		)
+		(pin "1"
+			(uuid "3361b830-8e4c-4c72-a736-d0a300301ef4")
+		)
+		(instances
+			(project "right side PCB"
+				(path "/3371d9f1-4ea1-4b23-b105-1bd8a9fee2a2"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")

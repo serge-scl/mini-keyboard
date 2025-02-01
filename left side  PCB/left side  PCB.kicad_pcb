@@ -134,6 +134,10 @@
 	(net 12 "unconnected-(J4-p1-Pad1)")
 	(net 13 "unconnected-(J1-Pin_2-Pad2)")
 	(net 14 "unconnected-(J1-Pin_1-Pad1)")
+	(net 15 "unconnected-(J5-Pin_2-Pad2)")
+	(net 16 "unconnected-(J5-Pin_1-Pad1)")
+	(net 17 "unconnected-(J5-Pin_3-Pad3)")
+	(net 18 "unconnected-(J5-Pin_4-Pad4)")
 	(footprint "Connector_PinHeader_2.00mm:PinHeader_1x10_P2.00mm_Vertical"
 		(layer "F.Cu")
 		(uuid "1cee83f0-e141-42ec-830a-96dbbaa01a31")
@@ -598,7 +602,7 @@
 			)
 		)
 		(property "Value" "+"
-			(at 1.5 -5 0)
+			(at 8.5 -2.4 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "330f2ec3-6228-4d68-ae7f-e93a2ef7c0de")
@@ -674,6 +678,313 @@
 			(pinfunction "p1")
 			(pintype "power_in")
 			(uuid "d15465bc-f9a2-405e-b906-98d71fb313b8")
+		)
+	)
+	(footprint "Connector_PinHeader_2.00mm:PinHeader_2x02_P2.00mm_Vertical"
+		(layer "F.Cu")
+		(uuid "b20c4bf9-b36d-40e5-a656-f91e05a1f174")
+		(at 92 119.6)
+		(descr "Through hole straight pin header, 2x02, 2.00mm pitch, double rows")
+		(tags "Through hole pin header THT 2x02 2.00mm double row")
+		(property "Reference" "J5"
+			(at 9 2 0)
+			(layer "F.SilkS")
+			(uuid "634556ca-6331-4afe-a2ca-3192554b4676")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Conn_02x02_Counter_Clockwise"
+			(at 17 1 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3d5da792-9d2e-497b-bb9a-ec3a79fc5063")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_2x02_P2.00mm_Vertical"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3f7c0c60-7452-4f7e-9574-20ad78433e90")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "21db3ac8-b61a-4e42-8dec-7a68f7684fd6")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x02, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9827dbef-e9cf-4614-b045-322d14a25de5")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "Connector*:*_2x??_*")
+		(path "/cafa3d95-b37f-470f-92e5-7cd0dd848f00")
+		(sheetname "Root")
+		(sheetfile "left side  PCB.kicad_sch")
+		(attr through_hole)
+		(fp_line
+			(start -1.06 -1.06)
+			(end 0 -1.06)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "5d671710-e210-4798-8d40-71effb1b01c6")
+		)
+		(fp_line
+			(start -1.06 0)
+			(end -1.06 -1.06)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "07ebc1a2-26b8-4e3e-8fed-b83334a7bc62")
+		)
+		(fp_line
+			(start -1.06 1)
+			(end -1.06 3.06)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "6e0621fc-5f79-408c-be76-abbf5ac59352")
+		)
+		(fp_line
+			(start -1.06 1)
+			(end 1 1)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "42c4166f-bb45-4d7f-b1ca-a1fd13173f39")
+		)
+		(fp_line
+			(start -1.06 3.06)
+			(end 3.06 3.06)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "b4d6f7fb-2a44-4dc3-bbf0-635ebb68d7d0")
+		)
+		(fp_line
+			(start 1 -1.06)
+			(end 3.06 -1.06)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "c1c67c42-2f49-44f0-a5cd-1ac1b289cf23")
+		)
+		(fp_line
+			(start 1 1)
+			(end 1 -1.06)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "6dbb197a-5853-48d3-bf65-be4d223d2f83")
+		)
+		(fp_line
+			(start 3.06 -1.06)
+			(end 3.06 3.06)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "82121797-4753-4542-be98-4e8ba3489afb")
+		)
+		(fp_line
+			(start -1.5 -1.5)
+			(end -1.5 3.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "1d801249-ceba-489e-952d-461cf7d19bfb")
+		)
+		(fp_line
+			(start -1.5 3.5)
+			(end 3.5 3.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "b95f6530-8187-40cc-a327-ae0373a04321")
+		)
+		(fp_line
+			(start 3.5 -1.5)
+			(end -1.5 -1.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "989ab06f-4177-404d-9b1e-aff143a7065b")
+		)
+		(fp_line
+			(start 3.5 3.5)
+			(end 3.5 -1.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "c3f77f11-4dba-451f-95c1-d85b8b2d6684")
+		)
+		(fp_line
+			(start -1 0)
+			(end 0 -1)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "d3d002e9-7679-4b8f-802b-53927a417765")
+		)
+		(fp_line
+			(start -1 3)
+			(end -1 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "53fcc57e-b5c3-4f75-86fa-4baeaef5b2da")
+		)
+		(fp_line
+			(start 0 -1)
+			(end 3 -1)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "faf7945d-1b40-451a-91e5-f9409047f996")
+		)
+		(fp_line
+			(start 3 -1)
+			(end 3 3)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "c6bd73a0-cf33-4f55-beec-f7369f2086af")
+		)
+		(fp_line
+			(start 3 3)
+			(end -1 3)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "eb802d6f-803a-4cc2-b403-1cfce83c96e2")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 1 1 90)
+			(layer "F.Fab")
+			(uuid "328419c5-a3b9-4be2-b228-3dbebc7989df")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole rect
+			(at 0 0)
+			(size 1.35 1.35)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 16 "unconnected-(J5-Pin_1-Pad1)")
+			(pinfunction "Pin_1")
+			(pintype "passive")
+			(uuid "a5ef5300-45a3-42ff-8c10-67557c8fc0d1")
+		)
+		(pad "2" thru_hole oval
+			(at 2 0)
+			(size 1.35 1.35)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 15 "unconnected-(J5-Pin_2-Pad2)")
+			(pinfunction "Pin_2")
+			(pintype "passive")
+			(uuid "9901e8c1-f6d6-4fcf-80bb-96278e5bb315")
+		)
+		(pad "3" thru_hole oval
+			(at 0 2)
+			(size 1.35 1.35)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 17 "unconnected-(J5-Pin_3-Pad3)")
+			(pinfunction "Pin_3")
+			(pintype "passive")
+			(uuid "d2dbc01f-f7bc-4a58-886d-b660d21125da")
+		)
+		(pad "4" thru_hole oval
+			(at 2 2)
+			(size 1.35 1.35)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 18 "unconnected-(J5-Pin_4-Pad4)")
+			(pinfunction "Pin_4")
+			(pintype "passive")
+			(uuid "dfd19899-e09e-4dab-9778-c849fe68306b")
+		)
+		(model "${KICAD8_3DMODEL_DIR}/BF050-04-A-B-0600-0100-N-G.stp"
+			(offset
+				(xyz -1 -1 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 0 0)
+			)
 		)
 	)
 	(footprint "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical"
