@@ -91,6 +91,238 @@
 	(net 8 "unconnected-(J2-Pin_2-Pad2)")
 	(net 9 "unconnected-(SW1-Pad1)")
 	(net 10 "unconnected-(SW1-Pad2)")
+	(net 11 "unconnected-(D1-K-Pad1)")
+	(net 12 "unconnected-(D1-A-Pad2)")
+	(footprint "LED_SMD:LED_PLCC_2835"
+		(layer "F.Cu")
+		(uuid "1b4cc9c1-a828-47be-8c91-8ddfebbb405c")
+		(at 140.625 81)
+		(descr "https://www.luckylight.cn/media/component/data-sheet/R2835BC-B2M-M10.pdf")
+		(tags "LED")
+		(property "Reference" "D1"
+			(at 0 -2.4 0)
+			(layer "F.SilkS")
+			(uuid "e5b1638b-c73b-4123-8d79-2b8ab3d3521c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 0 2.475 0)
+			(layer "F.Fab")
+			(uuid "cc1d7237-70f0-477a-90f0-838490d2c028")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_PLCC_2835"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bfcc3d6e-f912-4a18-875f-e3b2a14184fd")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f6d37ee2-5905-4b5b-99f3-ad3887159ca0")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e6699230-c61f-4abe-9bd6-a0aa2e18bb7b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
+		(path "/e24b1f6c-5dec-463c-b352-793886a78c16")
+		(sheetname "Root")
+		(sheetfile "Rear_power_board.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start -2.2 -1.6)
+			(end -2.2 1.6)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "b6dadec7-7719-46c4-b48d-8a13afa65f20")
+		)
+		(fp_line
+			(start 1.4 -1.6)
+			(end -2.2 -1.6)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "357f91e0-b0fd-43a5-8338-11c826a162f5")
+		)
+		(fp_line
+			(start 1.4 1.6)
+			(end -2.2 1.6)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "7dcc35d4-e2ac-49f8-958f-c6d710e666bc")
+		)
+		(fp_line
+			(start -2.25 -1.65)
+			(end 2.25 -1.65)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "4aeafc3c-29c3-4159-b06f-753c0a84ea85")
+		)
+		(fp_line
+			(start -2.25 1.65)
+			(end -2.25 -1.65)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "9f1f135e-4429-4c73-bbf6-b14f16ac1407")
+		)
+		(fp_line
+			(start 2.25 -1.65)
+			(end 2.25 1.65)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "d7de1af3-2ac4-41d2-a84c-d3b63abf2fed")
+		)
+		(fp_line
+			(start 2.25 1.65)
+			(end -2.25 1.65)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "1692b048-4dc8-415c-a332-8770e47c2dbe")
+		)
+		(fp_line
+			(start -1.75 1.4)
+			(end -1.75 -0.7)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "c0131f45-0e53-4372-9191-22f907b99fd9")
+		)
+		(fp_line
+			(start -1.05 -1.4)
+			(end -1.75 -0.7)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "b0e87aae-68c8-462f-8687-d0ec651475c4")
+		)
+		(fp_line
+			(start -1.05 -1.4)
+			(end 1.75 -1.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "8c153f64-6d8d-42a8-b9bd-3368af292be1")
+		)
+		(fp_line
+			(start 1.75 -1.4)
+			(end 1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "62087f70-61f6-4933-8e24-afdf996a7879")
+		)
+		(fp_line
+			(start 1.75 1.4)
+			(end -1.75 1.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "e34912bd-8354-4cf0-b37c-d6013576c53e")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "5f5ef31e-d992-4800-871a-060d362876f7")
+			(effects
+				(font
+					(size 0.9 0.9)
+					(thickness 0.135)
+				)
+			)
+		)
+		(pad "1" smd rect
+			(at -0.9 0)
+			(size 2.2 2.2)
+			(layers "F.Cu" "F.Paste" "F.Mask")
+			(net 11 "unconnected-(D1-K-Pad1)")
+			(pinfunction "K")
+			(pintype "passive")
+			(uuid "1134d54d-5199-4317-b4db-b9aff3251538")
+		)
+		(pad "2" smd rect
+			(at 1.375 0)
+			(size 1.25 2.2)
+			(layers "F.Cu" "F.Paste" "F.Mask")
+			(net 12 "unconnected-(D1-A-Pad2)")
+			(pinfunction "A")
+			(pintype "passive")
+			(uuid "ae878a02-0f88-4d59-9c0d-e214a989c901")
+		)
+		(model "${KICAD6_3DMODEL_DIR}/LED_SMD.3dshapes/LED_PLCC_2835.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "power_bl:switch_pw"
 		(layer "F.Cu")
 		(uuid "2cfb5944-e434-4e67-a0b5-77523cb96571")
@@ -225,7 +457,7 @@
 		(descr "Through hole angled socket strip, 2x02, 2.00mm pitch, 6.35mm socket length, double cols (from Kicad 4.0.7), script generated")
 		(tags "Through hole angled socket strip THT 2x02 2.00mm double row")
 		(property "Reference" "J2"
-			(at -4.31 2.5 360)
+			(at -4.31 2.5 0)
 			(layer "B.SilkS")
 			(uuid "a1b4e950-c65b-4829-b3b2-436acb306f8e")
 			(effects
@@ -237,7 +469,7 @@
 			)
 		)
 		(property "Value" "Conn_01x04_Socket"
-			(at -2 -4.5 360)
+			(at -2 -4.5 0)
 			(layer "B.Fab")
 			(uuid "953db2a8-d121-4fa5-bdce-befccdf41784")
 			(effects
@@ -249,7 +481,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinSocket_2.00mm:PinSocket_2x02_P2.00mm_Horizontal"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "26d2dc4a-2967-41e4-9883-b84e320b0554")
@@ -262,7 +494,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "3e128341-6c12-46ab-9e17-fd2c89cad61f")
@@ -275,7 +507,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "fd2dedc2-2d00-4d3f-9ebd-71f8ae8eb257")
@@ -763,7 +995,7 @@
 			(uuid "1b1317ef-8576-481b-9bb9-f3d72323ace4")
 		)
 		(fp_text user "${REFERENCE}"
-			(at -6.445 -1 360)
+			(at -6.445 -1 0)
 			(layer "B.Fab")
 			(uuid "e533aad7-06aa-4ff6-a66a-b81a0e7a8db8")
 			(effects
@@ -837,7 +1069,7 @@
 		(descr "Through hole angled socket strip, 2x02, 2.00mm pitch, 6.35mm socket length, double cols (from Kicad 4.0.7), script generated")
 		(tags "Through hole angled socket strip THT 2x02 2.00mm double row")
 		(property "Reference" "J1"
-			(at -6 -5 360)
+			(at -6 -5 0)
 			(layer "B.SilkS")
 			(uuid "11a975be-c0ed-4d2b-a144-40b7b97505d3")
 			(effects
@@ -849,7 +1081,7 @@
 			)
 		)
 		(property "Value" "Conn_01x04_Socket"
-			(at 5 3 360)
+			(at 5 3 0)
 			(layer "B.Fab")
 			(uuid "b3d373df-fcf3-443e-b53a-a7a27123aa98")
 			(effects
@@ -861,7 +1093,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinSocket_2.00mm:PinSocket_2x02_P2.00mm_Horizontal"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "9f985cfb-be1f-4168-b0a7-feec831c44b8")
@@ -874,7 +1106,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "15759254-2ec0-4844-9080-bf42d8df17d4")
@@ -887,7 +1119,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "bf44b3fa-7349-4c93-ac0f-3770aaa49d2e")
@@ -1375,7 +1607,7 @@
 			(uuid "7fa05ceb-ed5d-4811-a10e-d6678d6e620c")
 		)
 		(fp_text user "${REFERENCE}"
-			(at -6.445 -1 360)
+			(at -6.445 -1 0)
 			(layer "B.Fab")
 			(uuid "39bd2048-1682-4dee-9874-9d1a64a5f12e")
 			(effects
@@ -1463,6 +1695,17 @@
 		(layer "Edge.Cuts")
 		(uuid "0d8c30a3-d836-4b32-ab67-8875b58221f4")
 	)
+	(gr_circle
+		(center 112 72)
+		(end 112.5 72)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "Edge.Cuts")
+		(uuid "1cab32d9-8016-4004-9431-f8063a816131")
+	)
 	(gr_line
 		(start 165 86)
 		(end 110 86)
@@ -1472,6 +1715,17 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "33fd98d9-292b-4b1d-925b-cfc248afa47d")
+	)
+	(gr_circle
+		(center 163 72)
+		(end 163.5 72)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "Edge.Cuts")
+		(uuid "34676585-b41c-45a2-aa23-0036dae9a98c")
 	)
 	(gr_line
 		(start 165 70)

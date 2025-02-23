@@ -820,7 +820,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
+		(property "Footprint" "LED_SMD:LED_PLCC_2835"
 			(at 77.47 49.53 0)
 			(effects
 				(font
