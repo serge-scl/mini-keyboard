@@ -820,7 +820,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_PLCC_2835"
+		(property "Footprint" "LED_THT:LED_D1.8mm_W3.3mm_H2.4mm"
 			(at 77.47 49.53 0)
 			(effects
 				(font
