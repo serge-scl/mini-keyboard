@@ -7,6 +7,7 @@ Refactored version:
   and provides methods to set the active tip without recreating widgets.
 - JoystickFrame is a small widget to show left/right joystick/modifier activity.
 - Removed blocking time.sleep; replaced with non-blocking after().
+- Highlights all 4 directional characters when a pyramid is selected.
 """
 
 import tkinter as tk
@@ -81,7 +82,7 @@ class ScrollTxt(tk.Frame):
 class PyramidKeyboard(tk.Frame):
     """Reusable pyramid keyboard widget: rows x cols grid.
     Each cell has top/left/bottom/right labels and a center 'tip' label.
-    Use set_active(index) to highlight a tip, or clear_active().
+    Use set_active(index) to highlight all 4 directional chars + tip, or clear_active().
     """
 
     def __init__(self, master, rl_chars, tb_chars, rows=3, cols=5, **styles):
@@ -149,18 +150,29 @@ class PyramidKeyboard(tk.Frame):
         self.clear_active()
 
     def set_active(self, index):
-        """Highlight the tip at index (0..rows*cols-1). If index is None or out of range, clear."""
+        """Highlight the entire pyramid cell at index (0..rows*cols-1):
+        all 4 directional chars + center tip get active colors.
+        If index is None or out of range, clear."""
         if 0 <= index < len(self.cells):
             for i, cell in enumerate(self.cells):
                 if i == index:
-                    cell['tip'].config(text="X", fg=self.active_fg, bg=self.active_bg)
+                    # Highlight all 4 directions + tip with active colors
+                    for key in ('top', 'left', 'bottom', 'right', 'tip'):
+                        cell[key].config(fg=self.active_fg, bg=self.active_bg)
+                    cell['tip'].config(text="X")
                 else:
+                    # Reset to default state
+                    for key in ('top', 'left', 'bottom', 'right'):
+                        cell[key].config(fg="black", bg=Kb.bk_gr0)
                     cell['tip'].config(text="x", fg="black", bg=Kb.bk_gr0)
         else:
             self.clear_active()
 
     def clear_active(self):
+        """Clear highlighting from all pyramids."""
         for cell in self.cells:
+            for key in ('top', 'left', 'bottom', 'right'):
+                cell[key].config(fg="black", bg=Kb.bk_gr0)
             cell['tip'].config(text="x", fg="black", bg=Kb.bk_gr0)
 
 
@@ -273,7 +285,7 @@ class EditorMKPs:
         self.joystick_r(1)
 
     def press_key(self, event=None):
-        # Map key char to pyramid index; when found highlight tip immediately.
+        # Map key char to pyramid index; when found highlight entire pyramid cell.
         ch = event.char if event else ''
         for i in range(15):
             i2 = Kb.ch_e[i]
@@ -284,7 +296,7 @@ class EditorMKPs:
     def release_key(self, event=None):
         # Non-blocking reset after 500 ms to avoid freezing UI.
         def _reset():
-            self.tip_touch(16)  # clear tip highlighting
+            self.tip_touch(16)  # clear pyramid highlighting
             # Toggle both briefly (original behavior called both)
             self.joystick_r()
             self.joystick_l()
@@ -296,6 +308,8 @@ class EditorMKPs:
         pass
 
     def tip_touch(self, x=16):
+        """Highlight the entire pyramid cell (all 4 directions + tip) at index x.
+        If x >= 15, clear highlighting."""
         if 0 <= x < 15:
             self.pyramid.set_active(x)
         else:
