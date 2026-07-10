@@ -1,40 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title></title>
-	<meta name="generator" content="LibreOffice 7.3.7.2 (Linux)"/>
-	<meta name="created" content="2026-07-10T10:13:58.726960277"/>
-	<meta name="changed" content="2026-07-10T10:16:46.335580886"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mini Keyboard Project - Development Stage</title>
+	<style>
+		body {
+			font-family: "Liberation Sans", sans-serif;
+			line-height: 1.6;
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		h1 {
+			font-size: 28pt;
+			text-align: center;
+			margin-bottom: 1.5em;
+		}
+		.description {
+			color: #4e102d;
+			font-style: italic;
+			margin: 1em 0;
+		}
+	</style>
 </head>
-<body lang="ru-RU" dir="ltr"><p lang="en-US" align="center" style="margin-top: 0.42cm; page-break-after: avoid">
-<font face="Liberation Sans, sans-serif"><font size="6" style="font-size: 28pt"><b>At
-what stage</b></font></font></p>
-<p lang="en-US"><font color="#4e102d"><i>A complete set of drawings
-for the device itself has been created. These include about forty
-original parts, and a total of 150 including springs, contacts, and
-fasteners. This is already the third edition, so I was able to
-improve many components and mechanisms during the process.</i></font></p>
-<p lang="en-US"><font color="#4e102d"><i>I was able to test the main
-components. The main feature of my device is that you touch the tip
-of the pyramid before tilting it to enter a character. This touch is
-reflected on the screen in the editor; you see your finger just like
-a mouse cursor, and you don't have to look at your hand or the
-keyboard itself. To achieve this, I use two different types of
-sensors. Touch is tracked by capacitive sensors. I tested individual
-components, and they showed good sensitivity. Tip tilt is transmitted
-to a sliding grid, whose magnets transmit information to the Hall
-sensors. This system is self-learning, tracking the user's typical
-tilt force. My keyboard is bounce-free because there are no closed
-contacts.</i></font></p>
-<p lang="en-US"><font color="#4e102d"><i>I also wrote a text editor
-in Python. Since it's fully functional, I can say I have a prototype.
-AI Copilot significantly improved my code by removing erroneous
-calls, which significantly speeded up the app. AI also added a plugin
-that allows you to connect the device itself. While I don't have a
-device yet, I decided not to add the plugin to the code, especially
-since it would require additional configuration. Currently, the
-editor intercepts input from a regular keyboard, which prevents me
-from fully demonstrating its capabilities.</i></font></p>
+<body>
+	<h1>At what stage</h1>
+	
+	<div class="description">
+		<p>A complete set of drawings for the device itself has been created. These include about forty original parts, and a total of 150 including springs, contacts, and fasteners. This is already the third edition, so I was able to improve many components and mechanisms during the process.</p>
+		
+		<p>I was able to test the main components. The main feature of my device is that you touch the tip of the pyramid before tilting it to enter a character. This touch is reflected on the screen in the editor; you see your finger just like a mouse cursor, and you don't have to look at your hand or the keyboard itself. To achieve this, I use two different types of sensors. Touch is tracked by capacitive sensors. I tested individual components, and they showed good sensitivity. Tip tilt is transmitted to a sliding grid, whose magnets transmit information to the Hall sensors. This system is self-learning, tracking the user's typical tilt force. My keyboard is bounce-free because there are no closed contacts.</p>
+		
+		<p>I also wrote a text editor in Python. Since it's fully functional, I can say I have a prototype. AI Copilot significantly improved my code by removing erroneous calls, which significantly speeded up the app. AI also added a plugin that allows you to connect the device itself. While I don't have a device yet, I decided not to add the plugin to the code, especially since it would require additional configuration. Currently, the editor intercepts input from a regular keyboard, which prevents me from fully demonstrating its capabilities.</p>
+	</div>
 </body>
 </html>
