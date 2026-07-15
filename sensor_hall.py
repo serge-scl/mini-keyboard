@@ -13,9 +13,18 @@ import asyncio
 import board
 import analogio
 import usb_hid
+import time
 
 from adafruit_hid.keyboard import Keyboard
 from pk_layout import pyramid_keyboard_layout
+
+# Try to import the touch sensor accessor sens_touch() from sensor_touch.py.
+# sens_touch() is expected to return an integer 1..15 for touch addresses or 16 for "no touch".
+try:
+    from sensor_touch import sens_touch
+except Exception as e:
+    sens_touch = None
+    print("Warning: could not import sens_touch from sensor_touch.py:", e)
 
 # Character mappings for different key positions
 TOP_BOTTOM_CHARACTERS = ["'1", "\"2", "(3", "[4", "{5",
@@ -36,7 +45,7 @@ MIN_MOVEMENT = 100  # Minimum movement to register a key press
 # Global keyboard device
 mkps = Keyboard(usb_hid.devices)
 
-# Async control
+# Async control (can be set from outside to stop loops)
 stop_event = asyncio.Event()
 
 
@@ -44,6 +53,7 @@ class HallBuffer:
     """Buffer for storing sensor readings."""
     
     def __init__(self):
+        # initialize buffers with their label sentinel values
         self.tb_hall = [TB_LABEL]
         self.lr_hall = [LR_LABEL]
     
@@ -53,43 +63,15 @@ class HallBuffer:
         self.lr_hall = [LR_LABEL]
 
 
-def select_character(move_h, move_h1, middle_h, middle_h1, label):
-    """
-    Determine which character to send based on movement and sensor calibration.
-    
-    Args:
-        move_h: Movement range in primary axis
-        move_h1: Movement range in secondary axis
-        middle_h: Average value in primary axis
-        middle_h1: Average value in secondary axis
-        label: Sensor type label (TB_LABEL or LR_LABEL)
-    
-    Returns:
-        Tuple of (character, charset) or None if no significant movement detected
-    """
-    if abs(move_h) <= abs(move_h1) or abs(move_h) < MIN_MOVEMENT:
-        return None
-    
-    # Select character set based on sensor label
-    charset = TOP_BOTTOM_CHARACTERS if label == TB_LABEL else RIGHT_LEFT_CHARACTERS
-    
-    # Choose character based on which direction moved more
-    if middle_h > middle_h1:
-        return charset[0]
-    elif middle_h < middle_h1:
-        return charset[1]
-    
-    return None
-
-
 def send_key(character):
     """
     Send keyboard key based on character.
     
     Args:
-        character: Character from the keyboard layout mapping
+        character: single-character string from the keyboard layout mapping
     """
     if character not in pyramid_keyboard_layout:
+        print("Character not in layout:", repr(character))
         return
     
     key_code = pyramid_keyboard_layout[character]
@@ -100,71 +82,126 @@ def send_key(character):
         mkps.send(key_code)
 
 
-async def process_and_send_key(buffer, other_buffer, character_index, label):
+async def process_and_send_key(buffer_obj, primary_buffer, secondary_buffer):
     """
-    Process accumulated sensor data and send appropriate key.
-    
+    Process accumulated sensor data and send appropriate key according to the
+    pyramid two-level rules described:
+      - get x from sens_touch(): 1..15 => index 0..14, 16 => no touch (do nothing)
+      - get TB and LR character pairs for that index
+      - compare middle of primary vs secondary to choose which pair to use
+      - within chosen pair, select [0] if min(buffer) < LABEL or [1] if max(buffer) > LABEL
+      - send resulting single character via pyramid_keyboard_layout -> mkps.send
     Args:
-        buffer: Primary sensor buffer
-        other_buffer: Secondary sensor buffer for comparison
-        character_index: Index into character set
-        label: Sensor type label
+        buffer_obj: HallBuffer instance (so we can reset both buffers after a send)
+        primary_buffer: list of readings for primary axis (this buffer)
+        secondary_buffer: list of readings for the other axis
     """
-    if len(buffer) <= 1 or len(other_buffer) <= 1:
+    # need at least some readings
+    if len(primary_buffer) <= 1 or len(secondary_buffer) <= 1:
         return
-    
-    move_h = max(buffer) - min(buffer)
-    move_h1 = max(other_buffer) - min(other_buffer)
-    middle_h = sum(buffer) / len(buffer)
-    middle_h1 = sum(other_buffer) / len(other_buffer)
-    
-    character = select_character(move_h, move_h1, middle_h, middle_h1, label)
-    
-    if character:
-        send_key(character)
+
+    # If sens_touch is not available, we cannot decide the x position; skip
+    if sens_touch is None:
+        print("sens_touch unavailable; skipping key send.")
+        return
+
+    try:
+        x = sens_touch()  # expected 1..15 or 16 for no-touch
+    except Exception as e:
+        print("Error reading touch sensor:", e)
+        return
+
+    # If 16 (no touch), do nothing
+    if x == 16:
+        return
+
+    # Safety: ensure x in 1..15
+    if not (1 <= x <= 15):
+        print("Received unexpected touch value:", x)
+        return
+
+    idx = x - 1  # convert to 0..14
+
+    # Get pairs
+    try:
+        tb_pair = TOP_BOTTOM_CHARACTERS[idx]
+        lr_pair = RIGHT_LEFT_CHARACTERS[idx]
+    except IndexError:
+        print("Index out of range for character mappings:", idx)
+        return
+
+    # Compute middle values for tilt decision
+    middle_primary = sum(primary_buffer) / len(primary_buffer)
+    middle_secondary = sum(secondary_buffer) / len(secondary_buffer)
+
+    # Choose which pair by tilt: primary vs secondary
+    # If primary middle > secondary middle => use TOP_BOTTOM (primary is TB buffer)
+    # If primary middle < secondary middle => use RIGHT_LEFT (primary is TB buffer)
+    # The call sites will pass the correct buffers so this comparison works generically.
+    if middle_primary > middle_secondary:
+        chosen_pair = tb_pair
+        # for TB comparison we use TB_LABEL and primary_buffer (because TB is primary here)
+        threshold = TB_LABEL
+        selected_buffer = primary_buffer
+    else:
+        chosen_pair = lr_pair
+        threshold = LR_LABEL
+        selected_buffer = secondary_buffer
+
+    # chosen_pair is a two-character string like "'1" -> char0 and char1
+    char_to_send = None
+
+    if min(selected_buffer) < threshold:
+        char_to_send = chosen_pair[0]
+    elif max(selected_buffer) > threshold:
+        char_to_send = chosen_pair[1]
+
+    if char_to_send:
+        send_key(char_to_send)
+        # reset after sending to avoid duplicates
+        buffer_obj.reset()
 
 
-async def hall_sensor(pin, buffer, other_buffer, character_index, label):
+async def hall_sensor(pin, buffer_obj, primary_buf, secondary_buf):
     """
     Read hall effect sensor and detect key presses.
     
     Args:
         pin: Analog pin to read from
-        buffer: Primary sensor buffer for this pin
-        other_buffer: Secondary sensor buffer for comparison
-        character_index: Index into character set
-        label: Sensor type label (TB_LABEL or LR_LABEL)
+        buffer_obj: HallBuffer instance (so we can reset both buffers after send)
+        primary_buf: Primary sensor buffer for this pin
+        secondary_buf: Secondary sensor buffer for comparison
     """
     with analogio.AnalogIn(pin) as pin_x:
         while not stop_event.is_set():
-            buffer.append(pin_x.value)
+            primary_buf.append(pin_x.value)
             
-            print(f"Buffer: {buffer}, Other: {other_buffer}")
+            # Debug print
+            print("Primary:", primary_buf, "Secondary:", secondary_buf)
             
-            if len(buffer) > BUFFER_SIZE:
-                buffer.pop(0)
-                await process_and_send_key(buffer, other_buffer, character_index, label)
-                stop_event.set()
+            if len(primary_buf) > BUFFER_SIZE:
+                # maintain sliding window
+                primary_buf.pop(0)
+                # process and possibly send a key
+                await process_and_send_key(buffer_obj, primary_buf, secondary_buf)
+                # continue running (do not stop the whole system)
             
             await asyncio.sleep(SAMPLE_DELAY)
 
 
-async def main(character_index):
+async def main():
     """
     Main async coroutine for running the keyboard controller.
-    
-    Args:
-        character_index: Index into character set (0-14)
     """
     buffer_hall = HallBuffer()
     
     # Create sensor reading tasks
     hall_tb = asyncio.create_task(
-        hall_sensor(board.A0, buffer_hall.tb_hall, buffer_hall.lr_hall, character_index, TB_LABEL)
+        hall_sensor(board.A0, buffer_hall, buffer_hall.tb_hall, buffer_hall.lr_hall)
     )
     hall_lr = asyncio.create_task(
-        hall_sensor(board.A1, buffer_hall.lr_hall, buffer_hall.tb_hall, character_index, LR_LABEL)
+        hall_sensor(board.A1, buffer_hall, buffer_hall.lr_hall, buffer_hall.tb_hall)
     )
     
-    # Run both sensor tasks
+    # Run both sensor tasks until stop_event is set externally
     await asyncio.gather(hall_tb, hall_lr)
