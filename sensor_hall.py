@@ -36,11 +36,12 @@ RIGHT_LEFT_CHARACTERS = ["qw", "er", "ty", "ui", "op",
 
 # Sensor calibration and thresholds
 SENSOR_THRESHOLD = 58500
-TB_LABEL = 58501
-LR_LABEL = 58502
+TB_LABEL = None  # Will be set during autocalibration
+LR_LABEL = None  # Will be set during autocalibration
 BUFFER_SIZE = 20
 SAMPLE_DELAY = 0.5
 MIN_MOVEMENT = 100  # Minimum movement to register a key press
+CALIBRATION_SAMPLES = 10  # Number of samples to collect during calibration
 
 # Global keyboard device
 mkps = Keyboard(usb_hid.devices)
@@ -54,13 +55,81 @@ class HallBuffer:
     
     def __init__(self):
         # initialize buffers with their label sentinel values
-        self.tb_hall = [TB_LABEL]
-        self.lr_hall = [LR_LABEL]
+        self.tb_hall = [TB_LABEL] if TB_LABEL is not None else []
+        self.lr_hall = [LR_LABEL] if LR_LABEL is not None else []
     
     def reset(self):
         """Reset buffers after sending a key."""
-        self.tb_hall = [TB_LABEL]
-        self.lr_hall = [LR_LABEL]
+        self.tb_hall = [TB_LABEL] if TB_LABEL is not None else []
+        self.lr_hall = [LR_LABEL] if LR_LABEL is not None else []
+
+
+async def autocalibrate_sensors():
+    """
+    Autocalibrate Hall sensors at startup.
+    Waits for no-touch condition (sens_touch() == 16) and then collects
+    CALIBRATION_SAMPLES readings from both sensors to establish baseline values.
+    
+    Returns:
+        tuple: (TB_LABEL, LR_LABEL) calibrated values
+    """
+    global TB_LABEL, LR_LABEL
+    
+    print("Starting sensor autocalibration...")
+    print("Please ensure no keys are being touched.")
+    
+    if sens_touch is None:
+        print("Error: sens_touch unavailable; cannot autocalibrate. Using default values.")
+        TB_LABEL = 58501
+        LR_LABEL = 58502
+        return TB_LABEL, LR_LABEL
+    
+    # Wait for no-touch condition
+    max_wait_attempts = 50  # ~25 seconds at 0.5s per check
+    wait_attempts = 0
+    
+    while wait_attempts < max_wait_attempts:
+        try:
+            x = sens_touch()
+            if x == 16:  # No touch detected
+                print("No-touch condition detected. Beginning calibration...")
+                break
+        except Exception as e:
+            print("Error reading touch sensor during wait:", e)
+        
+        await asyncio.sleep(0.5)
+        wait_attempts += 1
+    else:
+        print("Warning: Timeout waiting for no-touch condition. Proceeding anyway.")
+    
+    # Collect calibration samples
+    tb_samples = []
+    lr_samples = []
+    
+    print(f"Collecting {CALIBRATION_SAMPLES} calibration samples...")
+    
+    try:
+        with analogio.AnalogIn(board.A0) as pin_tb, analogio.AnalogIn(board.A1) as pin_lr:
+            for i in range(CALIBRATION_SAMPLES):
+                tb_samples.append(pin_tb.value)
+                lr_samples.append(pin_lr.value)
+                print(f"Sample {i+1}: TB={pin_tb.value}, LR={pin_lr.value}")
+                await asyncio.sleep(SAMPLE_DELAY)
+    except Exception as e:
+        print("Error during sensor calibration:", e)
+        TB_LABEL = 58501
+        LR_LABEL = 58502
+        return TB_LABEL, LR_LABEL
+    
+    # Calculate average values
+    TB_LABEL = sum(tb_samples) // len(tb_samples)
+    LR_LABEL = sum(lr_samples) // len(lr_samples)
+    
+    print(f"Calibration complete!")
+    print(f"TB_LABEL (board.A0) = {TB_LABEL}")
+    print(f"LR_LABEL (board.A1) = {LR_LABEL}")
+    
+    return TB_LABEL, LR_LABEL
 
 
 def send_key(character):
@@ -193,6 +262,9 @@ async def main():
     """
     Main async coroutine for running the keyboard controller.
     """
+    # Perform autocalibration at startup
+    await autocalibrate_sensors()
+    
     buffer_hall = HallBuffer()
     
     # Create sensor reading tasks
