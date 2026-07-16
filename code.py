@@ -7,16 +7,16 @@ from sensor_hall import main
 import asyncio
 #import digitalio
 #import board
-from sensor_touch import sens_touch
+#from sensor_touch import sens_touch
 
 
 
 # while True:
 
-sens_touch()
-st = sens_touch()
+# sens_touch()
+# st = sens_touch()
 
-print("catch", st)
+#print("catch", st)
 
-asyncio.run(main(st))
+asyncio.run(main())
     
