@@ -866,7 +866,7 @@
 			(uuid "79e02188-a082-4bd2-83b7-f0aa9f9bfc4a")
 		)
 		(instances
-			(project ""
+			(project "motherboard"
 				(path "/99157713-5a67-456e-be9f-48b28b564fb7/7f0219d7-f801-4bc0-9074-00af159f1f32/b391cdcf-8263-4dd1-a91d-cff46ac050ac"
 					(reference "J1")
 					(unit 1)
@@ -937,7 +937,7 @@
 			(uuid "3666d230-99ee-4f6c-8ebb-7a8e1f0d1b73")
 		)
 		(instances
-			(project ""
+			(project "motherboard"
 				(path "/99157713-5a67-456e-be9f-48b28b564fb7/7f0219d7-f801-4bc0-9074-00af159f1f32/b391cdcf-8263-4dd1-a91d-cff46ac050ac"
 					(reference "U12")
 					(unit 1)

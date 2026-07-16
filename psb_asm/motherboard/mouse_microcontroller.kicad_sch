@@ -3519,6 +3519,16 @@
 	)
 	(wire
 		(pts
+			(xy 223.52 59.69) (xy 233.68 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c12c339c-43c6-421f-a85b-9593da9df85e")
+	)
+	(wire
+		(pts
 			(xy 219.71 144.78) (xy 207.01 144.78)
 		)
 		(stroke
@@ -3716,6 +3726,16 @@
 			(type default)
 		)
 		(uuid "de9beb41-5ff0-4edf-9e99-dce1d3c25a64")
+	)
+	(wire
+		(pts
+			(xy 223.52 57.15) (xy 233.68 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e52fe166-d48f-4020-a5a2-718512807647")
 	)
 	(wire
 		(pts
@@ -4304,6 +4324,18 @@
 		)
 		(uuid "1fa9a138-7705-48ae-b80e-e5db67d67614")
 	)
+	(hierarchical_label "hall0"
+		(shape input)
+		(at 233.68 59.69 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3f7ff345-78bf-4c4a-8647-99fbb1222269")
+	)
 	(hierarchical_label "GP5"
 		(shape input)
 		(at 177.8 52.07 180)
@@ -4351,6 +4383,18 @@
 			(justify right)
 		)
 		(uuid "fba7a427-c67e-4bd8-b9a0-7ac316c2b82c")
+	)
+	(hierarchical_label "hall1"
+		(shape input)
+		(at 233.68 57.15 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fe2300d1-a6d3-4aa8-b26f-b71e3bfa55dc")
 	)
 	(symbol
 		(lib_id "power:GND")
