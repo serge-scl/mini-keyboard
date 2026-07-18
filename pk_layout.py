@@ -20,4 +20,9 @@ pyramid_keyboard_layout = {'a': Keycode.A, 'b': Keycode.B, 's': Keycode.S,
                            '*':Keycode.KEYPAD_ASTERISK, ':':(Keycode.SHIFT, Keycode.SEMICOLON),
                            '/':Keycode.KEYPAD_FORWARD_SLASH, '!':(Keycode.SHIFT,Keycode.ONE), '=':Keycode.EQUALS,
                            'z':Keycode.Z, 'x':Keycode.X, 'c':Keycode.C, 'v':Keycode.V, 'n':Keycode.N, 'm':Keycode.M,
-                           '?':(Keycode.SHIFT, Keycode.FORWARD_SLASH), ',':Keycode.COMMA, '.':Keycode.PERIOD}
+                           '?':(Keycode.SHIFT, Keycode.FORWARD_SLASH), ',':Keycode.COMMA, '.':Keycode.PERIOD,
+                           'Shift':Keycode.LEFT_SHIFT, 'Ctrl':Keycode.CONTROL, 'Del':Keycode.DELETE, '<-':Keycode.BACKSPACE,
+                           'Shift':Keycode.RIGHT_SHIFT, 'Alt':Keycode.ALT, 'Enter':Keycode.ENTER, '->':Keycode.SPACEBAR,
+                           'Shift+Ctrl':(Keycode.LEFT_SHIFT,Keycode.CONTROL), 'Ctrl+Del':(Keycode.CONTROL,Keycode.DELETE ),
+                           'Shift+Alt':(Keycode.RIGHT_SHIFT, Keycode.ALT ), 'Alt+Enter':(Keycode.ALT,Keycode.ENTER),
+                           '<-Shift':Keycode.F1, '<-Del':Keycode.ESCAPE, 'Shift->':Keycode.TAB, 'Enter->':Keycode.F12}
