@@ -1,6 +1,16 @@
 import time
 import board
 import pulseio
+from adafruit_hid.keyboard import Keyboard
+from pk_layout import pyramid_keyboard_layout
+
+try:
+    from sensor_touch import sens_touch
+except Exception as e:
+    sens_touch = None
+    print("Warning: could not import sens_touch from sensor_touch.py:", e)
+
+control_command_clock = {'12':'Shift', '3':'Ctrl', '6':'Del', '9':'<-'}
 
 # Pin settings: X - sensor A, Y - sensor B
 pin_x = board.GP15
@@ -12,7 +22,6 @@ pulse_y = pulseio.PulseIn(pin_y, maxlen=2)
 # --- CALIBRATION SETTINGS ---
 # Run the code, look at the actual percentages in the console at the extremes
 # and enter your own values ​​in place of these templates (currently set to a range of 10%-90% centered at 50%):
-X_MIN, X_CENTER, X_MAX = 10.0, 50.0, 90.0
 X_MIN, X_CENTER, X_MAX = 10.0, 50.0, 90.0
 Y_MIN, Y_CENTER, Y_MAX = 10.0, 50.0, 90.0
 
