@@ -2539,6 +2539,16 @@
 	)
 	(wire
 		(pts
+			(xy 179.07 72.39) (xy 187.96 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "053786f0-c25d-4ffd-b50c-e4f9d3732630")
+	)
+	(wire
+		(pts
 			(xy 179.07 85.09) (xy 187.96 85.09)
 		)
 		(stroke
@@ -2886,16 +2896,6 @@
 			(type default)
 		)
 		(uuid "4280cd58-c145-48ac-b716-2c916320028a")
-	)
-	(wire
-		(pts
-			(xy 176.53 69.85) (xy 187.96 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "434537fd-e85e-4996-bc39-d1b4983aa85a")
 	)
 	(wire
 		(pts
@@ -3556,6 +3556,16 @@
 			(type default)
 		)
 		(uuid "c50e600f-54a4-4ddd-be7c-81bbc201b30f")
+	)
+	(wire
+		(pts
+			(xy 179.07 69.85) (xy 187.96 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5738459-ff2d-4c5c-9717-54a5fd94be6c")
 	)
 	(wire
 		(pts
@@ -4348,6 +4358,18 @@
 		)
 		(uuid "827f5c2b-6d27-4b2a-b8ec-3097f292cd07")
 	)
+	(hierarchical_label "hall4"
+		(shape input)
+		(at 179.07 69.85 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9593050f-efa9-4d50-9a2d-7ea6f80a7a60")
+	)
 	(hierarchical_label "hall3"
 		(shape input)
 		(at 179.07 85.09 180)
@@ -4371,6 +4393,18 @@
 			(justify left)
 		)
 		(uuid "cb6d79fe-5b33-45cc-9e17-9be145a70010")
+	)
+	(hierarchical_label "hall5"
+		(shape input)
+		(at 179.07 72.39 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d8b19560-4fbe-4b17-983c-7f38e828f7ad")
 	)
 	(hierarchical_label "GP4"
 		(shape input)

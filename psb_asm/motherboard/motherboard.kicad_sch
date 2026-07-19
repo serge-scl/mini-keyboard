@@ -1947,6 +1947,16 @@
 	)
 	(wire
 		(pts
+			(xy 50.8 129.54) (xy 55.88 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d46bb51-9264-4007-9355-95ddec711414")
+	)
+	(wire
+		(pts
 			(xy 228.6 106.68) (xy 229.87 106.68)
 		)
 		(stroke
@@ -2697,6 +2707,16 @@
 	)
 	(wire
 		(pts
+			(xy 50.8 133.35) (xy 55.88 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0b73519-704b-4b8b-ab57-ce1f85adb363")
+	)
+	(wire
+		(pts
 			(xy 49.53 109.22) (xy 55.88 109.22)
 		)
 		(stroke
@@ -3111,6 +3131,17 @@
 		)
 		(uuid "1bc41bee-b825-4d03-832a-b62e1ee3d4a5")
 	)
+	(label "h5"
+		(at 50.8 133.35 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1c1f06d3-2ea9-4df1-a853-f82e9d585fbe")
+	)
 	(label "+5V"
 		(at 64.77 19.05 0)
 		(fields_autoplaced yes)
@@ -3122,7 +3153,7 @@
 		)
 		(uuid "33f69698-f0d1-4554-a852-2f8f2dde452c")
 	)
-	(label "h5"
+	(label "h4"
 		(at 236.22 38.1 0)
 		(fields_autoplaced yes)
 		(effects
@@ -3276,7 +3307,7 @@
 		)
 		(uuid "6b1f3764-174d-46d1-9888-aeff0dee0ad6")
 	)
-	(label "h6"
+	(label "h5"
 		(at 273.05 38.1 0)
 		(fields_autoplaced yes)
 		(effects
@@ -3297,6 +3328,17 @@
 			(justify left bottom)
 		)
 		(uuid "6be4f817-166d-48e2-b664-61fea3c3bbf2")
+	)
+	(label "h4"
+		(at 50.8 129.54 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6eac7973-e776-46d2-9d66-e730033ab62d")
 	)
 	(label "Rx"
 		(at 201.93 154.94 0)
@@ -8486,6 +8528,26 @@
 				(justify left)
 			)
 			(uuid "4048548e-c121-496e-95cb-5259a8f82520")
+		)
+		(pin "hall5" input
+			(at 55.88 133.35 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "8da38048-3362-424e-8c51-f9b90d5d1ebc")
+		)
+		(pin "hall4" input
+			(at 55.88 129.54 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "bde41d06-9c80-4b2d-91ed-16378bfae19b")
 		)
 		(instances
 			(project "motherboard"
