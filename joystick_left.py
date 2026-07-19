@@ -1,6 +1,7 @@
 import time
 import board
 import pulseio
+import usb_hid
 from adafruit_hid.keyboard import Keyboard
 from pk_layout import pyramid_keyboard_layout
 
