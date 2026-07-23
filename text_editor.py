@@ -257,6 +257,7 @@ class EditorMKPs:
         self.window0.bind_all('<KeyRelease>', self.release_key)
 
         # Start mainloop
+        self.start_device_listener()
         self.window0.mainloop()
 
     # joystick helpers: call joystick frame methods
@@ -356,6 +357,115 @@ class EditorMKPs:
             with open(file, "w", encoding='utf-8') as file_handler:
                 file_handler.write(self.text_area.get(1.0, tk.END))
             self.window0.title(f"pyramid keyboard editor - {file}")
+
+    def start_device_listener(self, vid=None, pid=None, report_len=64, timeout_ms=500):
+        """
+        Listen for USB HID reports [0xAA, value] from an external device.
+
+        Parameters:
+          vid, pid : optional USB vendor_id/product_id to open a specific device (ints).
+                     If omitted, the code tries to auto-select a likely device.
+          report_len: length of HID report to read (64 is common).
+          timeout_ms: read timeout (ms) to let thread check for exit etc.
+        """
+        import threading
+        try:
+            import hid  # pyhidapi / hidapi (pip install hid or pip install pyhidapi)
+        except Exception as e:
+            print("HID library not available, install with: pip install hid (or pyhidapi).", e)
+            return
+
+        def find_and_open_device():
+            # If vid/pid provided, try open directly
+            if vid and pid:
+                try:
+                    d = hid.device()
+                    d.open(vid, pid)
+                    print(f"Opened HID device vid=0x{vid:04x} pid=0x{pid:04x}")
+                    return d
+                except Exception as e:
+                    print(f"Failed to open HID device vid=0x{vid:04x} pid=0x{pid:04x}: {e}")
+
+            # Otherwise enumerate and heuristically pick a device that looks like the CircuitPython/HID device
+            for info in hid.enumerate():
+                prod = info.get('product_string') or ''
+                manu = info.get('manufacturer_string') or ''
+                vid_i = info.get('vendor_id')
+                pid_i = info.get('product_id')
+                # heuristics: CircuitPython / TinyUSB / Adafruit boards often put 'CircuitPython' or 'Adafruit' in product/manufacturer
+                if any(x in (prod + manu).lower() for x in
+                       ('circuitpython', 'adafruit', 'tinyusb', 'usb hid', 'usb_hid')):
+                    try:
+                        d = hid.device()
+                        d.open(vid_i, pid_i)
+                        print(f"Auto-opened HID device {prod} ({manu}) vid=0x{vid_i:04x} pid=0x{pid_i:04x}")
+                        return d
+                    except Exception:
+                        pass
+
+            # fallback: try first device
+            devices = hid.enumerate()
+            if devices:
+                info = devices[0]
+                try:
+                    d = hid.device()
+                    d.open(info['vendor_id'], info['product_id'])
+                    print(
+                        f"Fallback opened HID device {info.get('product_string')} vid=0x{info['vendor_id']:04x} pid=0x{info['product_id']:04x}")
+                    return d
+                except Exception as e:
+                    print("Failed to auto-open first HID device:", e)
+            return None
+
+        def listen_hid():
+            dev = find_and_open_device()
+            if not dev:
+                print("No HID device found or could not open device.")
+                return
+            # Set non-blocking read by timeout in read() call (some hid wrappers provide read(timeout_ms))
+            try:
+                while True:
+                    try:
+                        data = dev.read(report_len, timeout_ms)  # returns list of ints or bytes depending on backend
+                    except TypeError:
+                        # Some pyhidapi versions use read(report_len) blocking, with no timeout arg.
+                        # Use read with no timeout and rely on OS blocking; you could use set_nonblocking if available.
+                        data = dev.read(report_len)
+
+                    if not data:
+                        # timeout / no data; continue
+                        continue
+
+                    # data can be bytes or list of ints
+                    if isinstance(data, (bytes, bytearray)):
+                        b = list(data)
+                    else:
+                        # assume list-like already
+                        b = list(data)
+
+                    # Expect format [0xAA, value]
+                    if len(b) >= 2 and b[0] == 0xAA:
+                        value = b[1]
+                        # schedule UI update on main thread
+                        try:
+                            self.window0.after(0, self.on_device_input, int(value))
+                        except Exception as e:
+                            print("Error scheduling GUI update:", e)
+                    else:
+                        # ignore unexpected reports
+                        # optionally print for debugging:
+                        # print("HID report ignored:", b)
+                        pass
+            except Exception as e:
+                print("HID listener error:", e)
+            finally:
+                try:
+                    dev.close()
+                except Exception:
+                    pass
+
+        thread = threading.Thread(target=listen_hid, daemon=True)
+        thread.start()
 
 
 if __name__ == "__main__":
