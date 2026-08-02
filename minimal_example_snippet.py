@@ -7,9 +7,14 @@ hid_device = usb_hid.devices[0]
 async def touch_sensor_poll_loop():
     while True:
         value = read_touch_sensor()  # your sensor code => 0..15 or other
-        # Compose report [0xAA, value]
-        report = bytes([0xAA, value & 0xFF])
+"""
+ValueError: report length must be 8
+The ValueError happens because the HID device expects reports of exactly 8 bytes, but your code sent only 2.
+Fix: send an 8-byte report (pad with zeros) or build the report the device's descriptor requires.
+"""
+        # Compose report ([0xAA, value & 0xFF] + [0] * 6) 
+        report = bytes([0xAA, value & 0xFF] + [0] * 6)
         # If your HID descriptor uses a report ID, include it as first byte:
-        # report = bytes([REPORT_ID, 0xAA, value & 0xFF])
+        # report = bytes([REPORT_ID, 0xAA, value & 0xFF] + [0] * 5)
         hid_device.send_report(report)
         await sleep_ms(50)  # or time.sleep(0.05) if not async
