@@ -1,6 +1,7 @@
 # On CircuitPython device (code.py)
 import usb_hid
-import time
+# import time
+import asyncio
 # find HID device object that you configured (index may vary)
 hid_device = usb_hid.devices[0]
 
@@ -18,11 +19,11 @@ async def touch_sensor_poll_loop():
         """      
         report = bytes([0xAA, value & 0xFF] + [0] * 6)
         hid_device.send_report(report)
-        await sleep_ms(50)  # or time.sleep(0.05) if not async
+        await asyncio.sleep_ms(50)  # or time.sleep(0.05) if not async
         
 async def read_touch_sensor():
     sens_cod = 1
-    await sleep_ms(750)
+    await asyncio.sleep_ms(750)
     return sens_cod
 
 async def main():
@@ -33,7 +34,3 @@ async def main():
     
 # asyncio.run(main())
     
-    
-
-        
-

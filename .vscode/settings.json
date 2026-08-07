@@ -14,5 +14,6 @@
     "circuitpython.board.version": null,
     "circuitpythonsync.cpbaseversion": "10",
     "circuitpythonsync.cpfullversion": "10.2.1",
-    "circuitpythonsync.curlibtag": "20260803"
+    "circuitpythonsync.curlibtag": "20260803",
+    "circuitpythonsync.drivepath": "/media/sergesclv/CIRCUITPY"
 }
