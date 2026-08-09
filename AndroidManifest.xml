@@ -1,0 +1,4 @@
+<!-- Requests access to the device's sensor hardware -->
+<uses-feature android:name="android.hardware.sensor.gyroscope" android:required="true" />
+<uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
+
