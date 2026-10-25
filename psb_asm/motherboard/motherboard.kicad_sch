@@ -3067,7 +3067,6 @@
 	)
 	(label "+5V"
 		(at 49.53 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3078,7 +3077,6 @@
 	)
 	(label "x1"
 		(at 124.46 113.03 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3089,7 +3087,6 @@
 	)
 	(label "3V3"
 		(at 49.53 109.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3100,7 +3097,6 @@
 	)
 	(label "y3"
 		(at 275.59 140.97 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3111,7 +3107,6 @@
 	)
 	(label "h2"
 		(at 161.29 38.1 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3122,7 +3117,6 @@
 	)
 	(label "h0"
 		(at 88.9 38.1 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3133,7 +3127,6 @@
 	)
 	(label "h5"
 		(at 50.8 133.35 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3144,7 +3137,6 @@
 	)
 	(label "+5V"
 		(at 64.77 19.05 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3155,7 +3147,6 @@
 	)
 	(label "h4"
 		(at 236.22 38.1 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3166,7 +3157,6 @@
 	)
 	(label "+5V"
 		(at 100.33 19.05 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3177,7 +3167,6 @@
 	)
 	(label "y2"
 		(at 130.81 107.95 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3188,7 +3177,6 @@
 	)
 	(label "h1"
 		(at 49.53 118.11 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3199,7 +3187,6 @@
 	)
 	(label "+5V"
 		(at 246.38 19.05 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3210,7 +3197,6 @@
 	)
 	(label "x3"
 		(at 209.55 73.66 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3221,7 +3207,6 @@
 	)
 	(label "x3"
 		(at 124.46 118.11 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3232,7 +3217,6 @@
 	)
 	(label "y1"
 		(at 274.32 96.52 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3243,7 +3227,6 @@
 	)
 	(label "scl"
 		(at 78.74 119.38 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3254,7 +3237,6 @@
 	)
 	(label "x5"
 		(at 124.46 123.19 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3265,7 +3247,6 @@
 	)
 	(label "x4"
 		(at 124.46 120.65 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3276,7 +3257,6 @@
 	)
 	(label "h2"
 		(at 50.8 121.92 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3287,7 +3267,6 @@
 	)
 	(label "3V3"
 		(at 104.14 95.25 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3298,7 +3277,6 @@
 	)
 	(label "h1"
 		(at 124.46 38.1 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3309,7 +3287,6 @@
 	)
 	(label "h5"
 		(at 273.05 38.1 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3320,7 +3297,6 @@
 	)
 	(label "Rx"
 		(at 128.27 128.27 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3331,7 +3307,6 @@
 	)
 	(label "h4"
 		(at 50.8 129.54 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3342,7 +3317,6 @@
 	)
 	(label "Rx"
 		(at 201.93 154.94 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3353,7 +3327,6 @@
 	)
 	(label "Lx"
 		(at 231.14 154.94 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3364,7 +3337,6 @@
 	)
 	(label "Lx"
 		(at 128.27 125.73 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3375,7 +3347,6 @@
 	)
 	(label "+5V"
 		(at 137.16 19.05 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3386,7 +3357,6 @@
 	)
 	(label "sda"
 		(at 78.74 123.19 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3397,7 +3367,6 @@
 	)
 	(label "x5"
 		(at 246.38 73.66 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3408,7 +3377,6 @@
 	)
 	(label "y1"
 		(at 130.81 105.41 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3419,7 +3387,6 @@
 	)
 	(label "x2"
 		(at 193.04 73.66 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3430,7 +3397,6 @@
 	)
 	(label "h0"
 		(at 49.53 114.3 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3441,7 +3407,6 @@
 	)
 	(label "x2"
 		(at 124.46 115.57 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3452,7 +3417,6 @@
 	)
 	(label "y3"
 		(at 130.81 110.49 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3463,7 +3427,6 @@
 	)
 	(label "x4"
 		(at 228.6 73.66 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3474,7 +3437,6 @@
 	)
 	(label "+5V"
 		(at 173.99 19.05 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3485,7 +3447,6 @@
 	)
 	(label "h3"
 		(at 50.8 125.73 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3496,7 +3457,6 @@
 	)
 	(label "y2"
 		(at 275.59 119.38 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3507,7 +3467,6 @@
 	)
 	(label "+5V"
 		(at 209.55 19.05 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3518,7 +3477,6 @@
 	)
 	(label "h3"
 		(at 198.12 38.1 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3529,7 +3487,6 @@
 	)
 	(label "x1"
 		(at 175.26 73.66 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7395,7 +7352,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "12ch Touch Sensor controller, UQFN-20"
 			(at 104.14 120.65 0)
 			(effects
 				(font

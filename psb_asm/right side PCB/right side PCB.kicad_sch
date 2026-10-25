@@ -758,7 +758,7 @@
 	)
 	(symbol
 		(lib_id "supply_btr:conn_min")
-		(at 137.16 82.55 0)
+		(at 156.21 71.12 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -767,25 +767,23 @@
 		(fields_autoplaced yes)
 		(uuid "90be710f-ea0b-4392-a5ae-80f8eee2b642")
 		(property "Reference" "J3"
-			(at 143.51 78.1049 0)
+			(at 153.71 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "+"
-			(at 143.51 80.01 0)
+			(at 153.71 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "suppl_bt:batter_conn"
-			(at 137.16 82.55 0)
+			(at 156.21 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -794,7 +792,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 137.16 82.55 0)
+			(at 156.21 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -803,7 +801,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 137.16 82.55 0)
+			(at 156.21 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -899,7 +897,7 @@
 	)
 	(symbol
 		(lib_id "supply_btr:conn_pls")
-		(at 137.16 88.9 0)
+		(at 157.48 91.44 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -908,25 +906,23 @@
 		(fields_autoplaced yes)
 		(uuid "c960ee0b-b6f2-45a4-bc8f-fd39aaced2e8")
 		(property "Reference" "J4"
-			(at 143.51 85.7249 0)
+			(at 154.94 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "-"
-			(at 143.51 87.63 0)
+			(at 154.94 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "suppl_bt:batter_conn"
-			(at 137.16 88.9 0)
+			(at 157.48 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -935,7 +931,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 137.16 88.9 0)
+			(at 157.48 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -944,7 +940,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 137.16 88.9 0)
+			(at 157.48 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
