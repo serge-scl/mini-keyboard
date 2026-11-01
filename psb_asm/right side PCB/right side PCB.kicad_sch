@@ -756,9 +756,99 @@
 			)
 		)
 	)
+	(wire
+		(pts
+			(xy 148.59 74.93) (xy 170.18 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a5a4ace-c0a1-45f9-9fec-8b2430bf0b3d")
+	)
+	(wire
+		(pts
+			(xy 135.89 74.93) (xy 135.89 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bd81c88-e6e2-47a9-b5b7-6af0a7adc04c")
+	)
+	(wire
+		(pts
+			(xy 135.89 77.47) (xy 170.18 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cc02f3c-2fe0-4c2f-aa15-87ddc9a78c47")
+	)
+	(wire
+		(pts
+			(xy 148.59 72.39) (xy 170.18 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52e40cfb-5cf4-47c5-9762-9047447a1289")
+	)
+	(wire
+		(pts
+			(xy 135.89 72.39) (xy 133.35 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b83e603a-7695-4ce9-8c3f-1a74aa4387aa")
+	)
+	(wire
+		(pts
+			(xy 133.35 72.39) (xy 133.35 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2f77c14-bba0-439a-8d25-afe486b6158c")
+	)
+	(wire
+		(pts
+			(xy 133.35 80.01) (xy 170.18 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc539b08-2835-4773-8aa5-fe9ef3d206aa")
+	)
+	(wire
+		(pts
+			(xy 160.02 95.25) (xy 170.18 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbf0b3c7-ae16-46ee-9d3f-da60d761f721")
+	)
+	(wire
+		(pts
+			(xy 133.35 46.99) (xy 142.24 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dec74c32-4884-4cec-8964-b7e26e1329d8")
+	)
 	(symbol
 		(lib_id "supply_btr:conn_min")
-		(at 156.21 71.12 180)
+		(at 130.81 43.18 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -767,7 +857,7 @@
 		(fields_autoplaced yes)
 		(uuid "90be710f-ea0b-4392-a5ae-80f8eee2b642")
 		(property "Reference" "J3"
-			(at 153.71 67.31 0)
+			(at 128.31 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -775,7 +865,7 @@
 			)
 		)
 		(property "Value" "+"
-			(at 153.71 69.85 0)
+			(at 128.31 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -783,7 +873,7 @@
 			)
 		)
 		(property "Footprint" "suppl_bt:batter_conn"
-			(at 156.21 71.12 0)
+			(at 130.81 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -792,7 +882,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 156.21 71.12 0)
+			(at 130.81 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -801,7 +891,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 156.21 71.12 0)
+			(at 130.81 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -823,16 +913,16 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_02x02_Counter_Clockwise")
-		(at 113.03 74.93 0)
+		(at 143.51 72.39 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "ab4c4e79-3aff-48b0-8568-85528fcff3db")
 		(property "Reference" "J1"
-			(at 114.3 68.58 0)
+			(at 142.24 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -840,7 +930,7 @@
 			)
 		)
 		(property "Value" "Conn_02x02_Counter_Clockwise"
-			(at 114.3 71.12 0)
+			(at 143.256 67.056 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -848,7 +938,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_2x02_P2.00mm_Vertical"
-			(at 113.03 74.93 0)
+			(at 143.51 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -857,7 +947,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 113.03 74.93 0)
+			(at 143.51 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -866,7 +956,7 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x02, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 113.03 74.93 0)
+			(at 143.51 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -897,7 +987,7 @@
 	)
 	(symbol
 		(lib_id "supply_btr:conn_pls")
-		(at 157.48 91.44 180)
+		(at 157.48 92.71 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -906,7 +996,7 @@
 		(fields_autoplaced yes)
 		(uuid "c960ee0b-b6f2-45a4-bc8f-fd39aaced2e8")
 		(property "Reference" "J4"
-			(at 154.94 86.36 0)
+			(at 154.94 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -914,7 +1004,7 @@
 			)
 		)
 		(property "Value" "-"
-			(at 154.94 88.9 0)
+			(at 154.94 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -922,7 +1012,7 @@
 			)
 		)
 		(property "Footprint" "suppl_bt:batter_conn"
-			(at 157.48 91.44 0)
+			(at 157.48 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -931,7 +1021,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 157.48 91.44 0)
+			(at 157.48 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -940,7 +1030,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 157.48 91.44 0)
+			(at 157.48 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1056,7 +1146,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_02x02_Counter_Clockwise")
-		(at 111.76 106.68 0)
+		(at 147.32 46.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1065,7 +1155,7 @@
 		(fields_autoplaced yes)
 		(uuid "dc6f634a-df61-4e0a-a454-e406825e200a")
 		(property "Reference" "J5"
-			(at 113.03 100.33 0)
+			(at 148.59 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1073,7 +1163,7 @@
 			)
 		)
 		(property "Value" "Conn_02x02_Counter_Clockwise"
-			(at 113.03 102.87 0)
+			(at 148.59 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1081,7 +1171,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_2x02_P2.00mm_Vertical"
-			(at 111.76 106.68 0)
+			(at 147.32 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1090,7 +1180,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 111.76 106.68 0)
+			(at 147.32 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1099,7 +1189,7 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x02, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 111.76 106.68 0)
+			(at 147.32 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)

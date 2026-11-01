@@ -2488,16 +2488,6 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 114.3) (xy 148.59 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a31fd14a-7852-490d-943d-6b1cc24a244b")
-	)
-	(wire
-		(pts
 			(xy 74.93 113.03) (xy 74.93 118.11)
 		)
 		(stroke
@@ -2676,45 +2666,25 @@
 		)
 		(uuid "feab0868-ae0a-4995-b631-757edb69c26e")
 	)
-	(label "pls"
-		(at 139.7 114.3 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "431a4f32-95f4-4f16-8ae6-5fe777d3d6d9")
-	)
-	(label "pls"
-		(at 55.88 118.11 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "77d70c5a-7cbe-4288-b18f-4c770e7fc141")
-	)
 	(hierarchical_label "led2"
 		(shape input)
-		(at 58.42 135.89 0)
+		(at 139.7 132.08 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "0d587a0a-c67c-4fed-9eec-791a57f2bb2e")
 	)
 	(hierarchical_label "led1"
 		(shape input)
-		(at 58.42 125.73 0)
+		(at 137.16 116.84 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "2d1e1fda-3c36-4d71-895c-6f1946ddf04d")
 	)
