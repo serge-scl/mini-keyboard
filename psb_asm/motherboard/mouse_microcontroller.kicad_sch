@@ -5158,7 +5158,7 @@
 			)
 			(uuid "4f37d6ef-71b5-443d-b1be-696d0e027f43")
 		)
-		(pin "5Vpwr" input
+		(pin "3Vpwr" input
 			(at 93.98 165.1 0)
 			(effects
 				(font

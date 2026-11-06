@@ -127,14 +127,12 @@
 	(net 5 "unconnected-(J2-Pin_2-Pad2)")
 	(net 6 "unconnected-(J2-Pin_4-Pad4)")
 	(net 7 "Net-(J2-Pin_1)")
-	(net 8 "Net-(J2-Pin_10)")
+	(net 8 "GND")
 	(net 9 "unconnected-(J2-Pin_5-Pad5)")
 	(net 10 "unconnected-(J2-Pin_7-Pad7)")
 	(net 11 "Net-(J4-p1)")
 	(net 12 "unconnected-(J1-Pin_2-Pad2)")
-	(net 13 "unconnected-(J1-Pin_1-Pad1)")
-	(net 14 "unconnected-(J5-Pin_3-Pad3)")
-	(net 15 "unconnected-(J5-Pin_4-Pad4)")
+	(net 13 "unconnected-(J5-Pin_3-Pad3)")
 	(footprint "Connector_PinHeader_2.00mm:PinHeader_1x10_P2.00mm_Vertical"
 		(layer "F.Cu")
 		(uuid "1cee83f0-e141-42ec-830a-96dbbaa01a31")
@@ -520,7 +518,7 @@
 				"In29.Cu" "In30.Cu"
 			)
 			(remove_unused_layers no)
-			(net 8 "Net-(J2-Pin_10)")
+			(net 8 "GND")
 			(pinfunction "Pin_10")
 			(pintype "passive")
 			(uuid "a8215170-83c8-4ac6-a368-b005bc85097c")
@@ -631,7 +629,7 @@
 				"In29.Cu" "In30.Cu"
 			)
 			(remove_unused_layers no)
-			(net 8 "Net-(J2-Pin_10)")
+			(net 8 "GND")
 			(pinfunction "p1")
 			(pintype "power_in")
 			(uuid "b32c9f6b-a685-4be8-97cb-7abfcc5f079a")
@@ -999,7 +997,7 @@
 				"In29.Cu" "In30.Cu"
 			)
 			(remove_unused_layers no)
-			(net 11 "Net-(J4-p1)")
+			(net 7 "Net-(J2-Pin_1)")
 			(pinfunction "Pin_1")
 			(pintype "passive")
 			(uuid "a5ef5300-45a3-42ff-8c10-67557c8fc0d1")
@@ -1015,7 +1013,7 @@
 				"In29.Cu" "In30.Cu"
 			)
 			(remove_unused_layers no)
-			(net 7 "Net-(J2-Pin_1)")
+			(net 11 "Net-(J4-p1)")
 			(pinfunction "Pin_2")
 			(pintype "passive")
 			(uuid "9901e8c1-f6d6-4fcf-80bb-96278e5bb315")
@@ -1031,7 +1029,7 @@
 				"In29.Cu" "In30.Cu"
 			)
 			(remove_unused_layers no)
-			(net 14 "unconnected-(J5-Pin_3-Pad3)")
+			(net 13 "unconnected-(J5-Pin_3-Pad3)")
 			(pinfunction "Pin_3")
 			(pintype "passive")
 			(uuid "d2dbc01f-f7bc-4a58-886d-b660d21125da")
@@ -1047,7 +1045,7 @@
 				"In29.Cu" "In30.Cu"
 			)
 			(remove_unused_layers no)
-			(net 15 "unconnected-(J5-Pin_4-Pad4)")
+			(net 8 "GND")
 			(pinfunction "Pin_4")
 			(pintype "passive")
 			(uuid "dfd19899-e09e-4dab-9778-c849fe68306b")
@@ -1307,7 +1305,7 @@
 				"In29.Cu" "In30.Cu"
 			)
 			(remove_unused_layers no)
-			(net 13 "unconnected-(J1-Pin_1-Pad1)")
+			(net 8 "GND")
 			(pinfunction "Pin_1")
 			(pintype "passive")
 			(uuid "7fed4c7b-8e53-4103-b3ef-2d88d1a53dde")
