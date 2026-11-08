@@ -141,7 +141,7 @@
 	(net 58 "/y3")
 	(net 59 "/Lx")
 	(net 60 "unconnected-(U1-~{IRQ}-Pad1)")
-	(net 61 "Net-(U9-EN)")
+	(net 61 "Net-(J1-Pin_1)")
 	(net 62 "/Rx")
 	(net 63 "unconnected-(U1-ADDR-Pad4)")
 	(net 64 "unconnected-(U1-VREG-Pad5)")
@@ -5187,7 +5187,7 @@
 	(footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "5d765311-e65c-4d76-b571-c792523e25bf")
-		(at 88.9125 86)
+		(at 83.0875 82)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R22"
@@ -5903,7 +5903,7 @@
 			(size 1.325 0.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 61 "Net-(U9-EN)")
+			(net 1 "/+5V")
 			(pinfunction "IN")
 			(pintype "power_in")
 			(uuid "41a59429-2177-4b5f-8407-7863a7769524")
@@ -5923,7 +5923,7 @@
 			(size 1.325 0.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 61 "Net-(U9-EN)")
+			(net 1 "/+5V")
 			(pinfunction "EN")
 			(pintype "input")
 			(uuid "913da19f-7e83-4f3b-917c-c8dbaa1a298c")
@@ -6168,7 +6168,7 @@
 			(size 1.075 1.05)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.238095)
-			(net 61 "Net-(U9-EN)")
+			(net 1 "/+5V")
 			(pintype "passive")
 			(uuid "1ed6640b-792c-4d27-bd63-eda95f90712b")
 		)
@@ -7453,6 +7453,270 @@
 			(uuid "f4f7f899-513b-4a0f-a889-40b382d42258")
 		)
 	)
+	(footprint "Package_TO_SOT_SMD:SOT-23"
+		(layer "F.Cu")
+		(uuid "97f55924-8183-49af-8a75-205f47905c35")
+		(at 91 86)
+		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236), generated with kicad-footprint-generator ipc_gullwing_generator.py")
+		(tags "SOT TO_SOT_SMD")
+		(property "Reference" "Q1"
+			(at 0 -2.4 0)
+			(layer "F.SilkS")
+			(uuid "d7a5f89b-e445-4b4d-82a6-a3deb9b08466")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "DMG2305UX"
+			(at 0 2.4 0)
+			(layer "F.Fab")
+			(uuid "8bc6cb1d-9201-4971-becf-807cd6b9df9d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c3f3681a-69e5-4582-8d25-6decb8252248")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://static.chipdip.ru/lib/416/DOC011416207.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dab4d593-ae1e-4d85-9b36-81d683cef7d7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "-3.3A Id, -20V Vds, P-Channel MOSFET, SOT-23"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9840ad57-684c-4188-83f0-75644c1c11f1")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "SOT?23*")
+		(path "/7f0219d7-f801-4bc0-9074-00af159f1f32/b391cdcf-8263-4dd1-a91d-cff46ac050ac/8a2fefd4-e791-4795-96b5-2e8f01ea7d59")
+		(sheetname "Power_Sheet")
+		(sheetfile "sheet_power.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 0 -1.56)
+			(end -0.65 -1.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "fd34aef3-dc1f-4d79-b0a9-5bb1b08e3966")
+		)
+		(fp_line
+			(start 0 -1.56)
+			(end 0.65 -1.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "fe93b6ef-d612-4e51-83a7-8b3fb34ebb7b")
+		)
+		(fp_line
+			(start 0 1.56)
+			(end -0.65 1.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "beac29ab-112d-431b-98db-882e559f65ad")
+		)
+		(fp_line
+			(start 0 1.56)
+			(end 0.65 1.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "980dd7e1-6613-492e-8015-f581177aad0b")
+		)
+		(fp_poly
+			(pts
+				(xy -1.1625 -1.51) (xy -1.4025 -1.84) (xy -0.9225 -1.84) (xy -1.1625 -1.51)
+			)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "34794436-3148-4c63-965c-e716b627131a")
+		)
+		(fp_line
+			(start -1.92 -1.7)
+			(end -1.92 1.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "42f15760-f0fa-4536-a5b3-432cf9e5567f")
+		)
+		(fp_line
+			(start -1.92 1.7)
+			(end 1.92 1.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "a97d9a53-e873-4ffc-ae11-e2d739e26277")
+		)
+		(fp_line
+			(start 1.92 -1.7)
+			(end -1.92 -1.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "81c0edab-1eee-4cde-ac39-04081df131f7")
+		)
+		(fp_line
+			(start 1.92 1.7)
+			(end 1.92 -1.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "13eb07df-73a5-4470-91af-e6e4f014df6e")
+		)
+		(fp_line
+			(start -0.65 -1.125)
+			(end -0.325 -1.45)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "db08f450-cc93-4b8e-93f4-bf70bfa9f7af")
+		)
+		(fp_line
+			(start -0.65 1.45)
+			(end -0.65 -1.125)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "23496c07-2ab4-43f7-b980-c918bc746903")
+		)
+		(fp_line
+			(start -0.325 -1.45)
+			(end 0.65 -1.45)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "385b51e8-bcc2-43a6-aa5c-5c7839a6f249")
+		)
+		(fp_line
+			(start 0.65 -1.45)
+			(end 0.65 1.45)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "16c5036a-6145-45d0-91ab-df9934eace88")
+		)
+		(fp_line
+			(start 0.65 1.45)
+			(end -0.65 1.45)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "72d25f2b-5757-4819-8050-3c33dd575d83")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "3c8fe976-201d-469d-98dd-aa8c4e8970f8")
+			(effects
+				(font
+					(size 0.32 0.32)
+					(thickness 0.05)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -0.9375 -0.95)
+			(size 1.475 0.6)
+			(layers "F.Cu" "F.Paste" "F.Mask")
+			(roundrect_rratio 0.25)
+			(net 1 "/+5V")
+			(pinfunction "G")
+			(pintype "input")
+			(uuid "846ed861-9029-48c8-8034-22ea8b5d0bb3")
+		)
+		(pad "2" smd roundrect
+			(at -0.9375 0.95)
+			(size 1.475 0.6)
+			(layers "F.Cu" "F.Paste" "F.Mask")
+			(roundrect_rratio 0.25)
+			(net 43 "/Mouse_and_microcontroller/vsys")
+			(pinfunction "S")
+			(pintype "passive")
+			(uuid "1d78af59-3cb5-4608-8001-aadc2682a556")
+		)
+		(pad "3" smd roundrect
+			(at 0.9375 0)
+			(size 1.475 0.6)
+			(layers "F.Cu" "F.Paste" "F.Mask")
+			(roundrect_rratio 0.25)
+			(net 61 "Net-(J1-Pin_1)")
+			(pinfunction "D")
+			(pintype "passive")
+			(uuid "42a9fb80-f6f4-4ec8-b3d2-5817a8d3e203")
+		)
+		(model "${KICAD8_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "mouse:Z-Encoder"
 		(layer "F.Cu")
 		(uuid "9cfadc7e-0c43-4476-ad9f-4e9a801bf23d")
@@ -8193,7 +8457,7 @@
 	(footprint "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "b7f32931-ffe5-41b6-babb-50097a414397")
-		(at 89.5975 81 180)
+		(at 100.4025 82 180)
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R21"
@@ -10370,7 +10634,7 @@
 			(size 1.075 1.05)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.238095)
-			(net 61 "Net-(U9-EN)")
+			(net 1 "/+5V")
 			(pintype "passive")
 			(uuid "89501e1c-4318-41e1-8414-e9390638c630")
 		)
@@ -18898,7 +19162,7 @@
 			(size 2.5 0.9)
 			(layers "B.Cu" "B.Paste" "B.Mask")
 			(roundrect_rratio 0.25)
-			(net 43 "/Mouse_and_microcontroller/vsys")
+			(net 61 "Net-(J1-Pin_1)")
 			(pinfunction "Pin_1")
 			(pintype "passive")
 			(thermal_bridge_angle 45)

@@ -2090,7 +2090,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 157.48) (xy 106.68 157.48)
+			(xy 93.98 153.67) (xy 105.41 153.67)
 		)
 		(stroke
 			(width 0)
@@ -2400,7 +2400,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 148.59) (xy 106.68 148.59)
+			(xy 93.98 147.32) (xy 106.68 147.32)
 		)
 		(stroke
 			(width 0)
@@ -2437,6 +2437,16 @@
 			(type default)
 		)
 		(uuid "7d7fa8ab-7852-459c-8f54-dfd985146fd3")
+	)
+	(wire
+		(pts
+			(xy 93.98 161.29) (xy 107.95 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e18e385-a7f7-4546-86d4-7015a5116e89")
 	)
 	(wire
 		(pts
@@ -2899,7 +2909,7 @@
 		(uuid "ff7a8df2-4859-4cfd-8cd2-14f146385340")
 	)
 	(label "led2"
-		(at 106.68 157.48 0)
+		(at 105.41 153.67 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3148,6 +3158,16 @@
 		)
 		(uuid "9356a682-7fc0-4033-bf46-f86fde1a80b7")
 	)
+	(label "+5V"
+		(at 107.95 161.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9437c30f-fc33-4edc-834c-58f0fc9321d0")
+	)
 	(label "VDD_SS"
 		(at 49.53 76.2 0)
 		(effects
@@ -3289,7 +3309,7 @@
 		(uuid "e85810d6-0968-49c2-a932-d3f1e5fb2292")
 	)
 	(label "led1"
-		(at 106.68 148.59 0)
+		(at 106.68 147.32 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5139,7 +5159,7 @@
 			)
 		)
 		(pin "led1" input
-			(at 93.98 148.59 0)
+			(at 93.98 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5149,7 +5169,7 @@
 			(uuid "3e2d3f76-094b-49b4-a5cd-807b83bb7b80")
 		)
 		(pin "led2" input
-			(at 93.98 157.48 0)
+			(at 93.98 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5178,7 +5198,7 @@
 			)
 			(uuid "9729c22d-7850-44dc-a4d3-11fe0ba57f43")
 		)
-		(pin "vdd_5s" input
+		(pin "vdd_ss" input
 			(at 93.98 142.24 0)
 			(effects
 				(font
@@ -5187,6 +5207,16 @@
 				(justify right)
 			)
 			(uuid "6037b6f7-cfb0-4ee3-bd8f-b6b078d79a42")
+		)
+		(pin "+5V" input
+			(at 93.98 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a21343b8-7905-48a1-8702-12e29af39b8b")
 		)
 		(instances
 			(project "motherboard"
